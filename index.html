@@ -1012,4 +1012,194 @@
                     </div>
                     <div class="a4-timeline-item">
                         <span class="a4-year">2022年</span>
-                        <span><strong>
+                        <span><strong>元業綠能驗證</strong></span>
+                    </div>
+                    <div class="a4-timeline-item">
+                        <span class="a4-year">2024年</span>
+                        <span><strong>天梁不動產</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 公司服務項目（移至歷史沿革下方，可展開與收起） -->
+        <div class="a4-section">
+            <div class="a4-section-title a4-collapsible-header" onclick="toggleA4Section('service-body', 'service-arrow', 'service-toggle-text')">
+                <div class="a4-collapsible-left">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>公司服務項目</span>
+                </div>
+                <div class="a4-collapsible-right">
+                    <span id="service-toggle-text">展開內容</span>
+                    <i class="fa-solid fa-chevron-down" id="service-arrow"></i>
+                </div>
+            </div>
+            <div class="a4-collapsible-body" id="service-body">
+                <div class="a4-service-grid">
+                    <div class="a4-service-card">
+                        <h4>1. 合法化</h4>
+                        <p>地政士相關服務、特定工廠登記/變更、一般工廠登記/變更、用地計劃變更、興辦事業計劃、毗鄰變更、補照、容許、指定建築線</p>
+                    </div>
+                    <div class="a4-service-card">
+                        <h4>2. ESG轉型</h4>
+                        <p>工廠補助、ESCO能源技術服務、ISO50001能源管理系統、ISO14064-1、ISO14064-2、ISO14067、ISO14001、消防設備工程、太陽能自建規劃</p>
+                    </div>
+                    <div class="a4-service-card">
+                        <h4>3. 體面退場</h4>
+                        <p>特殊不動產買賣、稅務規劃、勞資調解、公司清算、體面退場。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 個人資訊 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-user"></i> 個人資訊
+            </div>
+            <div class="a4-info-grid">
+                <div class="a4-info-item"><span class="a4-label">孩子：</span><span class="a4-val">女兒105年次、兒子107年次</span></div>
+                <div class="a4-info-item"><span class="a4-label">居住地：</span><span class="a4-val">在地35年高雄人，現居仁武區12年</span></div>
+                <div class="a4-info-item"><span class="a4-label">寵物：</span><span class="a4-val">曾經養過山豬，三天就餓死了</span></div>
+                <div class="a4-info-item"><span class="a4-label">業餘愛好：</span><span class="a4-val">孫子兵法、紫微斗數、電吉他、讀書</span></div>
+                <div class="a4-info-item full-width"><span class="a4-label">感興趣的活動：</span><span class="a4-val">看謄本、財報探究真實故事、商業模式規劃與執行</span></div>
+            </div>
+        </div>
+
+        <!-- 沒有人知道的秘密 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-star"></i> 沒有人知道的秘密
+            </div>
+            <ul class="a4-secret-list">
+                <li>15歲破浪經商，於市場浪潮中淬鍊出極致的商業直覺。</li>
+                <li>25歲聽聞工地福利社很好賺，立即考取手排駕照進軍工地，做到有分店。</li>
+                <li>家庭主婦自學紫微斗數，創業四年公司達集團化發展。</li>
+            </ul>
+        </div>
+
+        <!-- 我的強烈願望 & 我的成功關鍵 -->
+        <div class="a4-two-col">
+            <div class="a4-highlight-box">
+                <div class="a4-highlight-title"><i class="fa-solid fa-fire"></i> 我的強烈願望</div>
+                <div class="a4-highlight-text">成大EMBA、系統化管理公司</div>
+            </div>
+            <div class="a4-highlight-box">
+                <div class="a4-highlight-title"><i class="fa-solid fa-key"></i> 我的成功關鍵</div>
+                <div class="a4-highlight-text">擅長用未來的自己，來決策現在的方向。</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 圖片彈窗 Modal（上方電梯導覽圖、下方30樓導覽圖） -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <div class="modal-images-wrapper" onclick="event.stopPropagation()">
+        <img class="modal-content" id="modalImg1" alt="電梯搭乘導覽圖">
+        <img class="modal-content" id="modalImg2" alt="30樓樓層導覽圖" style="display: none;">
+    </div>
+</div>
+
+<div class="toast" id="toast">已複製到剪貼簿</div>
+
+<script>
+    function toggleAccordion() {
+        const content = document.getElementById('accordion-content');
+        const arrow = document.getElementById('accordion-arrow');
+        content.classList.toggle('open');
+        
+        if (content.classList.contains('open')) {
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    }
+
+    function toggleA4Section(bodyId, arrowId, labelId) {
+        const body = document.getElementById(bodyId);
+        const arrow = document.getElementById(arrowId);
+        const label = document.getElementById(labelId);
+        body.classList.toggle('open');
+
+        if (body.classList.contains('open')) {
+            arrow.style.transform = 'rotate(180deg)';
+            label.innerText = '收起內容';
+        } else {
+            arrow.style.transform = 'rotate(0deg)';
+            label.innerText = '展開內容';
+        }
+    }
+
+    function copyText(text, message) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast(message);
+        }).catch(err => {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            showToast(message);
+        });
+    }
+
+    function copyCardUrl() {
+        const currentUrl = window.location.href;
+        copyText(currentUrl, '名片網址已複製！');
+    }
+
+    function showToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.innerText = msg;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2000);
+    }
+
+    function openMemberModal() {
+        const modal = document.getElementById('memberModal');
+        modal.style.display = "block";
+        modal.scrollTop = 0;
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMemberModal() {
+        document.getElementById('memberModal').style.display = "none";
+        document.body.style.overflow = "";
+    }
+
+    function openModal(imgSrc1, imgSrc2) {
+        const modal = document.getElementById('imageModal');
+        const modalImg1 = document.getElementById('modalImg1');
+        const modalImg2 = document.getElementById('modalImg2');
+        
+        modal.style.display = "block";
+        modal.scrollTop = 0;
+        modalImg1.src = imgSrc1;
+        
+        if (imgSrc2) {
+            modalImg2.src = imgSrc2;
+            modalImg2.style.display = "block";
+        } else {
+            modalImg2.style.display = "none";
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = "none";
+    }
+
+    window.onload = function() {
+        var currentUrl = window.location.href;
+        if(currentUrl.startsWith('http')) {
+            document.getElementById('qrcode-img').src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(currentUrl);
+            document.getElementById('card-url-text').innerText = currentUrl;
+        }
+    }
+</script>
+
+</body>
+</html>
