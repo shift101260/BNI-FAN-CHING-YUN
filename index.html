@@ -181,42 +181,6 @@
             font-weight: 600;
         }
 
-        /* BNI 一對一專屬四宮格按鈕 */
-        .bni-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-
-        .bni-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 12px;
-            background: #f0fdfa;
-            border: 1.5px solid #99f6e4;
-            border-radius: 14px;
-            text-decoration: none;
-            color: #0f766e;
-            font-size: 14px;
-            font-weight: 800;
-            box-shadow: 0 2px 6px rgba(15, 118, 110, 0.06);
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        .bni-btn:active {
-            transform: scale(0.97);
-            background: #ccfbf1;
-        }
-
-        .bni-btn i {
-            font-size: 16px;
-            color: #d97706;
-        }
-
         .social-links { 
             display: flex; 
             flex-direction: column; 
@@ -551,28 +515,41 @@
         </div>
     </div>
 
-    <!-- 新增四個 BNI 一對一表格按鈕（位於服務項目上方） -->
-    <div class="bni-grid">
-        <a href="#member-profile" class="bni-btn">
-            <i class="fa-solid fa-id-card"></i>
-            <span>會員資料表</span>
-        </a>
-        <a href="#gains-sheet" class="bni-btn">
-            <i class="fa-solid fa-clipboard-list"></i>
-            <span>GAIS工作表</span>
-        </a>
-        <a href="#contact-sphere" class="bni-btn">
-            <i class="fa-solid fa-diagram-project"></i>
-            <span>業務人脈圈</span>
-        </a>
-        <a href="#top-ten-clients" class="bni-btn">
-            <i class="fa-solid fa-trophy"></i>
-            <span>十大客戶表</span>
-        </a>
-    </div>
-
     <!-- 連結項目清單 -->
     <div class="social-links">
+        <!-- 新增四個按鈕（樣式與服務項目完全一致） -->
+        <a href="#member-profile" class="link-btn">
+            <div class="link-btn-left">
+                <i class="fa-solid fa-id-card"></i>
+                <span>會員資料表</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+
+        <a href="#gains-sheet" class="link-btn">
+            <div class="link-btn-left">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span>GAIS工作表</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+
+        <a href="#contact-sphere" class="link-btn">
+            <div class="link-btn-left">
+                <i class="fa-solid fa-diagram-project"></i>
+                <span>業務人脈圈</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+
+        <a href="#top-ten-clients" class="link-btn">
+            <div class="link-btn-left">
+                <i class="fa-solid fa-trophy"></i>
+                <span>十大客戶表</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+
         <div>
             <div class="link-btn" onclick="toggleAccordion()">
                 <div class="link-btn-left">
