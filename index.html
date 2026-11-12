@@ -393,6 +393,249 @@
             z-index: 2001;
         }
 
+        /* ====== A4 紙張彈窗樣式（會員資料表） ====== */
+        .a4-paper {
+            background: #ffffff;
+            width: 100%;
+            max-width: 794px; /* 標準 A4 寬度 (210mm @ 96dpi) */
+            min-height: 1050px;
+            margin: 0 auto;
+            padding: 40px 44px;
+            border-radius: 4px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+            color: #1e293b;
+            text-align: left;
+            position: relative;
+            border-top: 8px solid #0f766e;
+            animation: paperPop 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes paperPop {
+            from { opacity: 0; transform: translateY(20px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .a4-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2.5px solid #0f172a;
+            padding-bottom: 16px;
+            margin-bottom: 22px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .a4-badge {
+            display: inline-block;
+            background: #0f766e;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .a4-main-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: 1.5px;
+        }
+
+        .a4-sub-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #d97706;
+            margin-top: 4px;
+        }
+
+        .a4-header-right {
+            text-align: right;
+            font-size: 12.5px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .a4-section {
+            margin-bottom: 20px;
+        }
+
+        .a4-section-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0f172a;
+            background: #f1f5f9;
+            border-left: 4px solid #d97706;
+            padding: 6px 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .a4-section-title i {
+            color: #0f766e;
+        }
+
+        .a4-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 24px;
+            font-size: 13.5px;
+            line-height: 1.6;
+            padding: 0 4px;
+        }
+
+        .a4-info-item {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .a4-info-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .a4-label {
+            font-weight: 700;
+            color: #0f766e;
+            white-space: nowrap;
+        }
+
+        .a4-val {
+            color: #334155;
+            font-weight: 500;
+        }
+
+        .a4-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 4px;
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .a4-timeline-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .a4-year {
+            background: #fef3c7;
+            color: #b45309;
+            font-weight: 800;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            border: 1px solid #fde68a;
+            margin-top: 2px;
+        }
+
+        .a4-two-col {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .a4-highlight-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .a4-highlight-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #0f766e;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .a4-highlight-text {
+            font-size: 13.5px;
+            color: #1e293b;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .a4-secret-list {
+            list-style: none;
+            padding: 0 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .a4-secret-list li {
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .a4-secret-list li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: #d97706;
+            font-size: 11px;
+            top: 2px;
+        }
+
+        .a4-service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .a4-service-card {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-top: 3.5px solid #0f766e;
+            border-radius: 8px;
+            padding: 12px 14px;
+        }
+
+        .a4-service-card h4 {
+            font-size: 14px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+
+        .a4-service-card p {
+            font-size: 12.5px;
+            color: #475569;
+            line-height: 1.55;
+            text-align: justify;
+        }
+
+        @media (max-width: 680px) {
+            .a4-paper {
+                padding: 26px 18px;
+                min-height: auto;
+            }
+            .a4-header-right {
+                text-align: left;
+            }
+            .a4-info-grid,
+            .a4-two-col,
+            .a4-service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .qrcode-section { 
             margin-top: 24px; 
             padding-top: 20px; 
@@ -517,14 +760,14 @@
 
     <!-- 連結項目清單 -->
     <div class="social-links">
-        <!-- 新增四個按鈕（樣式與服務項目完全一致） -->
-        <a href="#member-profile" class="link-btn">
+        <!-- 會員資料表（點擊彈出 A4 頁面） -->
+        <div class="link-btn" onclick="openMemberModal()">
             <div class="link-btn-left">
                 <i class="fa-solid fa-id-card"></i>
                 <span>會員資料表</span>
             </div>
             <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
+        </div>
 
         <a href="#gains-sheet" class="link-btn">
             <div class="link-btn-left">
@@ -602,14 +845,6 @@
             </div>
         </div>
 
-        <a href="https://www.yuanyeh.com.tw/aboutus/%E8%AD%89%E7%85%A7-%E8%AD%89%E6%9B%B8" target="_blank" class="link-btn">
-            <div class="link-btn-left">
-                <i class="fa-solid fa-certificate"></i>
-                <span>專業證照</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
-
         <a href="https://www.yuanyeh.com.tw" target="_blank" class="link-btn">
             <div class="link-btn-left">
                 <i class="fa-solid fa-globe"></i>
@@ -656,6 +891,120 @@
             <button class="url-copy-btn" onclick="copyCardUrl()">
                 <i class="fa-regular fa-copy"></i> 複製網址
             </button>
+        </div>
+    </div>
+</div>
+
+<!-- 會員資料表 A4 彈窗 Modal -->
+<div id="memberModal" class="modal" onclick="closeMemberModal()">
+    <span class="modal-close" onclick="closeMemberModal()">&times;</span>
+    <div class="a4-paper" onclick="event.stopPropagation()">
+        <div class="a4-header">
+            <div>
+                <div class="a4-badge">BNI 富鼎分會 ｜ 一對一會員資料表</div>
+                <div class="a4-main-title">樊靖畇 <span style="font-size: 16px; font-weight: 700; color: #475569;">品牌執行長</span></div>
+                <div class="a4-sub-title">代表行業：特登農地工廠顧問業</div>
+            </div>
+            <div class="a4-header-right">
+                <div><strong>睿立資產管理顧問</strong></div>
+                <div>高雄市苓雅區新光路38號30樓之2</div>
+                <div>團隊行業經驗：<strong>10年</strong></div>
+            </div>
+        </div>
+
+        <!-- 商業資訊與歷史沿革 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-building"></i> 商業資訊與歷史沿革
+            </div>
+            <div class="a4-info-grid" style="margin-bottom: 12px;">
+                <div class="a4-info-item"><span class="a4-label">分會／業別：</span><span class="a4-val">富鼎分會 ｜ 特登農地工廠顧問業</span></div>
+                <div class="a4-info-item"><span class="a4-label">姓名／職稱：</span><span class="a4-val">樊靖畇 品牌執行長</span></div>
+                <div class="a4-info-item"><span class="a4-label">公司名稱：</span><span class="a4-val">睿立資產管理顧問</span></div>
+                <div class="a4-info-item"><span class="a4-label">團隊行業經驗：</span><span class="a4-val">10年</span></div>
+                <div class="a4-info-item full-width"><span class="a4-label">公司地址：</span><span class="a4-val">高雄市苓雅區新光路38號30樓之2</span></div>
+            </div>
+            <div class="a4-timeline">
+                <div class="a4-timeline-item">
+                    <span class="a4-year">2017年</span>
+                    <span><strong>地政士事務所</strong></span>
+                </div>
+                <div class="a4-timeline-item">
+                    <span class="a4-year">2019年</span>
+                    <span><strong>特定工廠登記</strong>｜榮獲經發局全市前五名、客戶榮獲經濟部優良工廠獎</span>
+                </div>
+                <div class="a4-timeline-item">
+                    <span class="a4-year">2021年</span>
+                    <span><strong>睿立資產管理</strong>｜一般工廠登記/變更、特定工廠登記/變更、用地計劃變更、興辦事業計劃、毗鄰變更、補照、容許、指定建築線等</span>
+                </div>
+                <div class="a4-timeline-item">
+                    <span class="a4-year">2022年</span>
+                    <span><strong>元業綠能驗證</strong>｜ESCO、ISO50001、ISO14064-1、ISO14064-2、ISO14067、ISO14001、太陽能自建、工廠補助、消防設備工程。</span>
+                </div>
+                <div class="a4-timeline-item">
+                    <span class="a4-year">2024年</span>
+                    <span><strong>天梁不動產</strong>｜特殊不動產買賣、稅務規劃、勞資調解、公司清算</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 個人資訊 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-user"></i> 個人資訊
+            </div>
+            <div class="a4-info-grid">
+                <div class="a4-info-item"><span class="a4-label">孩子：</span><span class="a4-val">女兒105年次、兒子107年次</span></div>
+                <div class="a4-info-item"><span class="a4-label">居住地：</span><span class="a4-val">在地35年高雄人，現居仁武區12年</span></div>
+                <div class="a4-info-item"><span class="a4-label">寵物：</span><span class="a4-val">曾經養過山豬，三天就餓死了</span></div>
+                <div class="a4-info-item"><span class="a4-label">業餘愛好：</span><span class="a4-val">孫子兵法、紫微斗數、電吉他、讀書</span></div>
+                <div class="a4-info-item full-width"><span class="a4-label">感興趣的活動：</span><span class="a4-val">看謄本、財報探究真實故事、商業模式規劃與執行</span></div>
+            </div>
+        </div>
+
+        <!-- 我的強烈願望 & 我的成功關鍵 -->
+        <div class="a4-two-col">
+            <div class="a4-highlight-box">
+                <div class="a4-highlight-title"><i class="fa-solid fa-fire"></i> 我的強烈願望</div>
+                <div class="a4-highlight-text">成大EMBA、系統化管理公司</div>
+            </div>
+            <div class="a4-highlight-box">
+                <div class="a4-highlight-title"><i class="fa-solid fa-key"></i> 我的成功關鍵</div>
+                <div class="a4-highlight-text">擅長用未來的自己，來決策現在的方向。</div>
+            </div>
+        </div>
+
+        <!-- 沒有人知道的秘密 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-star"></i> 沒有人知道的秘密
+            </div>
+            <ul class="a4-secret-list">
+                <li>15歲破浪經商，於市場浪潮中淬鍊出極致的商業直覺。</li>
+                <li>25歲聽聞工地福利社很好賺，立即考取手排駕照進軍工地，做到有分店。</li>
+                <li>家庭主婦自學紫微斗數，創業四年公司達集團化發展。</li>
+            </ul>
+        </div>
+
+        <!-- 公司服務項目 -->
+        <div class="a4-section" style="margin-bottom: 0;">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-briefcase"></i> 公司服務項目
+            </div>
+            <div class="a4-service-grid">
+                <div class="a4-service-card">
+                    <h4>1. 合法化</h4>
+                    <p>地政士相關服務、特定工廠登記/變更、一般工廠登記/變更、用地計劃變更、興辦事業計劃、毗鄰變更、補照、容許、指定建築線</p>
+                </div>
+                <div class="a4-service-card">
+                    <h4>2. ESG轉型</h4>
+                    <p>工廠補助、ESCO能源技術服務、ISO50001能源管理系統、ISO14064-1、ISO14064-2、ISO14067、ISO14001、消防設備工程、太陽能自建規劃</p>
+                </div>
+                <div class="a4-service-card">
+                    <h4>3. 體面退場</h4>
+                    <p>特殊不動產買賣、稅務規劃、勞資調解、公司清算、體面退場。</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -710,6 +1059,18 @@
         setTimeout(() => {
             toast.classList.remove('show');
         }, 2000);
+    }
+
+    function openMemberModal() {
+        const modal = document.getElementById('memberModal');
+        modal.style.display = "block";
+        modal.scrollTop = 0;
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMemberModal() {
+        document.getElementById('memberModal').style.display = "none";
+        document.body.style.overflow = "";
     }
 
     function openModal(imgSrc1, imgSrc2) {
