@@ -417,13 +417,11 @@
 
         .a4-header {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: flex-start;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 18px;
             margin-bottom: 22px;
-            gap: 16px;
-            flex-wrap: wrap;
         }
 
         .a4-badge {
@@ -452,15 +450,17 @@
             margin-top: 4px;
         }
 
-        .a4-header-right {
-            text-align: right;
-            font-size: 12.5px;
+        .a4-company-meta {
+            text-align: left;
+            font-size: 13px;
             color: #475569;
             line-height: 1.65;
             background: #f8fafc;
-            padding: 10px 16px;
+            padding: 12px 16px;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
+            margin-top: 12px;
+            width: 100%;
         }
 
         .a4-section {
@@ -693,10 +693,6 @@
                 padding: 26px 18px;
                 min-height: auto;
                 border-radius: 22px;
-            }
-            .a4-header-right {
-                text-align: left;
-                width: 100%;
             }
             .a4-info-grid,
             .a4-two-col,
@@ -972,12 +968,10 @@
     <span class="modal-close" onclick="closeMemberModal()">&times;</span>
     <div class="a4-paper" onclick="event.stopPropagation()">
         <div class="a4-header">
-            <div>
-                <div class="a4-badge">BNI 富鼎分會 ｜ 一對一會員資料表</div>
-                <div class="a4-main-title">樊靖畇 <span style="font-size: 16px; font-weight: 700; color: #475569;">品牌執行長</span></div>
-                <div class="a4-sub-title">BNI富鼎分會｜特登農地工廠顧問業</div>
-            </div>
-            <div class="a4-header-right">
+            <div class="a4-badge">BNI 富鼎分會 ｜ 一對一會員資料表</div>
+            <div class="a4-main-title">樊靖畇 <span style="font-size: 16px; font-weight: 700; color: #475569;">品牌執行長</span></div>
+            <div class="a4-sub-title">BNI富鼎分會｜特登農地工廠顧問業</div>
+            <div class="a4-company-meta">
                 <div><strong>睿立資產管理顧問</strong></div>
                 <div>高雄市苓雅區新光路38號30樓之2</div>
                 <div>團隊行業經驗：<strong>10年</strong></div>
