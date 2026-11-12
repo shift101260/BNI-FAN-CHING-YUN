@@ -1,7 +1,7 @@
 {
-  "name": "樊靖畇 品牌長 - 電子名片",
-  "short_name": "樊靖畇名片",
-  "description": "睿立集團 品牌長 樊靖畇 電子名片",
+  "name": "BNI富鼎|樊靖畇|特登農地工廠顧問業",
+  "short_name": "樊靖畇簡介",
+  "description": "BNI富鼎|樊靖畇|特登農地工廠顧問業",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
