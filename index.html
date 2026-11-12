@@ -1250,7 +1250,7 @@
                                 <div class="fishbone-card">
                                     <div class="fishbone-year">2019年</div>
                                     <div class="fishbone-title">特定工廠登記</div>
-                                    <div class="fishbone-desc">榮獲經發局全市前五名、經發局特登工廠明日之星獎、客戶榮獲經濟部優良工廠獎</div>
+                                    <div class="fishbone-desc">榮獲經發局全市前五名、客戶榮獲經濟部優良工廠獎</div>
                                 </div>
                             </div>
                             <div class="fishbone-node">
@@ -1391,4 +1391,59 @@
 
     function copyCardUrl() {
         const currentUrl = window.location.href;
-        copyText(
+        copyText(currentUrl, '名片網址已複製！');
+    }
+
+    function showToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.innerText = msg;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2000);
+    }
+
+    function openMemberModal() {
+        const modal = document.getElementById('memberModal');
+        modal.style.display = "block";
+        modal.scrollTop = 0;
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMemberModal() {
+        document.getElementById('memberModal').style.display = "none";
+        document.body.style.overflow = "";
+    }
+
+    function openModal(imgSrc1, imgSrc2) {
+        const modal = document.getElementById('imageModal');
+        const modalImg1 = document.getElementById('modalImg1');
+        const modalImg2 = document.getElementById('modalImg2');
+        
+        modal.style.display = "block";
+        modal.scrollTop = 0;
+        modalImg1.src = imgSrc1;
+        
+        if (imgSrc2) {
+            modalImg2.src = imgSrc2;
+            modalImg2.style.display = "block";
+        } else {
+            modalImg2.style.display = "none";
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('imageModal').style.display = "none";
+    }
+
+    window.onload = function() {
+        var currentUrl = window.location.href;
+        if(currentUrl.startsWith('http')) {
+            document.getElementById('qrcode-img').src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(currentUrl);
+            document.getElementById('card-url-text').innerText = currentUrl;
+        }
+    }
+</script>
+
+</body>
+</html>
