@@ -198,7 +198,7 @@
             border-radius: 16px; 
             text-decoration: none; 
             color: #1e293b; 
-            font-size: 15px;
+            font-size: 15px; 
             font-weight: 700; 
             box-shadow: 0 2px 8px rgba(0,0,0,0.03);
             cursor: pointer;
@@ -576,7 +576,7 @@
             font-weight: 500;
         }
 
-        /* ====== 魚骨圖樣式（Fishbone Timeline） ====== */
+        /* ====== 魚骨圖樣式（Fishbone Timeline - 支援電腦橫向 / 手機直向時間排序） ====== */
         .fishbone-wrapper {
             position: relative;
             padding: 8px 4px;
@@ -584,21 +584,33 @@
 
         .fishbone-chart {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            column-gap: 10px;
+            row-gap: 10px;
+            padding-right: 54px;
+            padding-left: 6px;
         }
 
-        /* 中央水平魚骨主幹 */
+        /* 電腦版 Grid 欄位與順序配置：上排 2017, 2021, 2024；中間魚骨；下排 2019, 2022 */
+        .node-2017 { grid-column: 1 / 3; order: 1; }
+        .node-2021 { grid-column: 3 / 5; order: 2; }
+        .node-2024 { grid-column: 5 / 7; order: 3; }
+
         .fishbone-spine {
+            grid-column: 1 / 7;
+            order: 4;
             position: relative;
             height: 4px;
             background: linear-gradient(90deg, #94a3b8 0%, #0f766e 60%, #d97706 100%);
             border-radius: 4px;
-            margin: 2px 54px 2px 12px;
+            margin: 2px 0 2px 6px;
             display: flex;
             align-items: center;
         }
+
+        .node-2019 { grid-column: 2 / 4; order: 5; }
+        .node-2022 { grid-column: 4 / 6; order: 6; }
 
         /* 魚尾（左側分叉） */
         .fishbone-tail {
@@ -639,26 +651,6 @@
             border-right: 9px solid #0f766e;
         }
 
-        /* 上排與下排魚刺列 */
-        .fishbone-row {
-            display: grid;
-            position: relative;
-            padding-right: 52px;
-        }
-
-        .fishbone-row.top-row {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            padding-left: 6px;
-        }
-
-        .fishbone-row.bottom-row {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            padding-left: 58px;
-            padding-right: 84px;
-        }
-
         .fishbone-node {
             position: relative;
             display: flex;
@@ -673,6 +665,7 @@
             box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
             position: relative;
             z-index: 2;
+            flex: 1;
         }
 
         .fishbone-year {
@@ -710,12 +703,12 @@
         }
 
         /* 斜向魚刺連接線（上排往右下斜插主幹） */
-        .top-row .fishbone-rib {
+        .top-node .fishbone-rib-top {
             height: 22px;
             position: relative;
         }
 
-        .top-row .fishbone-rib::before {
+        .top-node .fishbone-rib-top::before {
             content: "";
             position: absolute;
             left: 26px;
@@ -727,7 +720,7 @@
             transform-origin: top left;
         }
 
-        .top-row .fishbone-rib::after {
+        .top-node .fishbone-rib-top::after {
             content: "";
             position: absolute;
             left: 35px;
@@ -741,12 +734,12 @@
         }
 
         /* 斜向魚刺連接線（下排往右上斜插主幹） */
-        .bottom-row .fishbone-rib {
+        .bottom-node .fishbone-rib-bottom {
             height: 22px;
             position: relative;
         }
 
-        .bottom-row .fishbone-rib::before {
+        .bottom-node .fishbone-rib-bottom::before {
             content: "";
             position: absolute;
             left: 38px;
@@ -759,7 +752,7 @@
             z-index: 3;
         }
 
-        .bottom-row .fishbone-rib::after {
+        .bottom-node .fishbone-rib-bottom::after {
             content: "";
             position: absolute;
             left: 41px;
@@ -870,13 +863,12 @@
                 grid-template-columns: 1fr;
             }
 
-            /* 手機版魚骨圖自動轉為直向魚骨軸線 */
-            .fishbone-spine {
-                display: none;
-            }
+            /* 手機版魚骨圖自動轉為直向時間順序（2017 → 2019 → 2021 → 2022 → 2024 → 睿立集團） */
             .fishbone-chart {
-                position: relative;
+                display: flex;
+                flex-direction: column;
                 padding-left: 24px;
+                padding-right: 0;
                 gap: 12px;
             }
             .fishbone-chart::before {
@@ -884,19 +876,17 @@
                 position: absolute;
                 left: 7px;
                 top: 6px;
-                bottom: 6px;
+                bottom: 18px;
                 width: 3px;
                 background: linear-gradient(180deg, #94a3b8 0%, #0f766e 60%, #d97706 100%);
                 border-radius: 3px;
             }
-            .fishbone-row.top-row,
-            .fishbone-row.bottom-row {
-                grid-template-columns: 1fr;
-                padding: 0;
-                gap: 12px;
+            .fishbone-node {
+                order: initial;
+                grid-column: auto;
             }
-            .top-row .fishbone-rib,
-            .bottom-row .fishbone-rib {
+            .fishbone-rib-top,
+            .fishbone-rib-bottom {
                 display: none;
             }
             .fishbone-node::before {
@@ -920,6 +910,28 @@
                 border-radius: 50%;
                 background: #ffffff;
                 border: 2.5px solid #d97706;
+            }
+            /* 手機版魚骨尾端接上「睿立集團」目標標籤 */
+            .fishbone-spine {
+                order: 99;
+                height: auto;
+                background: none;
+                margin: 2px 0 0 0;
+                justify-content: flex-start;
+            }
+            .fishbone-tail {
+                display: none;
+            }
+            .fishbone-head {
+                position: relative;
+                right: auto;
+                left: -24px;
+                border-radius: 16px;
+                padding: 5px 14px;
+                font-size: 12px;
+            }
+            .fishbone-head::before {
+                display: none;
             }
         }
 
@@ -1197,7 +1209,7 @@
             </div>
         </div>
 
-        <!-- 歷史沿革（魚骨圖排版，可展開與收起） -->
+        <!-- 歷史沿革（魚骨圖排版，電腦橫向／手機直向皆依年份排序） -->
         <div class="a4-section">
             <div class="a4-section-title a4-collapsible-header" onclick="toggleA4Section('history-body', 'history-arrow', 'history-toggle-text')">
                 <div class="a4-collapsible-left">
@@ -1212,55 +1224,57 @@
             <div class="a4-collapsible-body" id="history-body">
                 <div class="fishbone-wrapper">
                     <div class="fishbone-chart">
-                        <!-- 上排魚刺節點（2017、2021、2024） -->
-                        <div class="fishbone-row top-row">
-                            <div class="fishbone-node">
-                                <div class="fishbone-card">
-                                    <div class="fishbone-year">2017年</div>
-                                    <div class="fishbone-title">地政士事務所</div>
-                                    <div class="fishbone-desc">第八屆服務公關委員會委員、法院遺產管理人。</div>
-                                </div>
-                                <div class="fishbone-rib"></div>
+                        <!-- 2017年（電腦上排第1／手機第1） -->
+                        <div class="fishbone-node top-node node-2017">
+                            <div class="fishbone-card">
+                                <div class="fishbone-year">2017年</div>
+                                <div class="fishbone-title">地政士事務所</div>
+                                <div class="fishbone-desc">第八屆服務公關委員會委員、法院遺產管理人。</div>
                             </div>
-                            <div class="fishbone-node">
-                                <div class="fishbone-card">
-                                    <div class="fishbone-year">2021年</div>
-                                    <div class="fishbone-title">睿立資產管理</div>
-                                </div>
-                                <div class="fishbone-rib"></div>
+                            <div class="fishbone-rib-top"></div>
+                        </div>
+
+                        <!-- 2019年（電腦下排第1／手機第2） -->
+                        <div class="fishbone-node bottom-node node-2019">
+                            <div class="fishbone-rib-bottom"></div>
+                            <div class="fishbone-card">
+                                <div class="fishbone-year">2019年</div>
+                                <div class="fishbone-title">特定工廠登記</div>
+                                <div class="fishbone-desc">榮獲經發局全市前五名、經發局特登工廠明日之星獎、客戶榮獲經濟部優良工廠獎。</div>
                             </div>
-                            <div class="fishbone-node">
-                                <div class="fishbone-card">
-                                    <div class="fishbone-year">2024年</div>
-                                    <div class="fishbone-title">天梁不動產</div>
-                                </div>
-                                <div class="fishbone-rib"></div>
+                        </div>
+
+                        <!-- 2021年（電腦上排第2／手機第3） -->
+                        <div class="fishbone-node top-node node-2021">
+                            <div class="fishbone-card">
+                                <div class="fishbone-year">2021年</div>
+                                <div class="fishbone-title">睿立資產管理</div>
                             </div>
+                            <div class="fishbone-rib-top"></div>
+                        </div>
+
+                        <!-- 2022年（電腦下排第2／手機第4） -->
+                        <div class="fishbone-node bottom-node node-2022">
+                            <div class="fishbone-rib-bottom"></div>
+                            <div class="fishbone-card">
+                                <div class="fishbone-year">2022年</div>
+                                <div class="fishbone-title">元業綠能驗證</div>
+                            </div>
+                        </div>
+
+                        <!-- 2024年（電腦上排第3／手機第5） -->
+                        <div class="fishbone-node top-node node-2024">
+                            <div class="fishbone-card">
+                                <div class="fishbone-year">2024年</div>
+                                <div class="fishbone-title">天梁不動產</div>
+                            </div>
+                            <div class="fishbone-rib-top"></div>
                         </div>
 
                         <!-- 中央魚骨主幹 + 魚尾 + 魚頭 -->
                         <div class="fishbone-spine">
                             <div class="fishbone-tail"></div>
                             <div class="fishbone-head">睿立集團</div>
-                        </div>
-
-                        <!-- 下排魚刺節點（2019、2022） -->
-                        <div class="fishbone-row bottom-row">
-                            <div class="fishbone-node">
-                                <div class="fishbone-rib"></div>
-                                <div class="fishbone-card">
-                                    <div class="fishbone-year">2019年</div>
-                                    <div class="fishbone-title">特定工廠登記</div>
-                                    <div class="fishbone-desc">榮獲經發局全市前五名、經發局特登工廠明日之星獎、客戶榮獲經濟部優良工廠獎。</div>
-                                </div>
-                            </div>
-                            <div class="fishbone-node">
-                                <div class="fishbone-rib"></div>
-                                <div class="fishbone-card">
-                                    <div class="fishbone-year">2022年</div>
-                                    <div class="fishbone-title">元業綠能驗證</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
