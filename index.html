@@ -228,24 +228,6 @@
             transition: transform 0.3s ease;
         }
 
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
-            background: #f8fafc;
-            border-radius: 0 0 16px 16px;
-            margin-top: -8px;
-            border: 1.5px solid #e2e8f0;
-            border-top: none;
-            padding: 0 16px;
-        }
-
-        .accordion-content.open {
-            max-height: 2000px;
-            transition: max-height 0.5s ease-in-out;
-            padding: 20px 16px;
-        }
-
         .service-header {
             font-size: 14px;
             font-weight: 800;
@@ -258,7 +240,7 @@
         }
 
         .company-block {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             padding-bottom: 16px;
             border-bottom: 1px dashed #cbd5e1;
         }
@@ -280,22 +262,22 @@
         }
 
         .company-desc {
-            font-size: 12.5px;
+            font-size: 13px;
             color: #475569;
-            line-height: 1.6;
+            line-height: 1.65;
             margin-bottom: 8px;
             text-align: justify;
         }
 
         .service-items {
-            font-size: 12px;
+            font-size: 12.5px;
             font-weight: 700;
             color: #1e293b;
             background: #ffffff;
             padding: 8px 12px;
-            border-radius: 8px;
+            border-radius: 10px;
             border-left: 3px solid #d97706;
-            line-height: 1.5;
+            line-height: 1.55;
         }
 
         /* 導覽按鈕區塊 */
@@ -485,7 +467,7 @@
             color: #0f766e;
         }
 
-        /* 可展開／收起標題列（歷史沿革、公司服務項目共用） */
+        /* 可展開／收起標題列（歷史沿革、公司介紹、服務項目共用） */
         .a4-collapsible-header {
             justify-content: space-between;
             cursor: pointer;
@@ -536,9 +518,9 @@
         }
 
         .a4-collapsible-body.open {
-            max-height: 1400px;
+            max-height: 2000px;
             opacity: 1;
-            transition: max-height 0.45s ease-in-out, opacity 0.35s ease, padding 0.3s ease;
+            transition: max-height 0.5s ease-in-out, opacity 0.35s ease, padding 0.3s ease;
             padding: 16px;
             border: 1px solid #e2e8f0;
         }
@@ -1092,58 +1074,6 @@
             <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
         </a>
 
-        <div>
-            <div class="link-btn" onclick="toggleAccordion()">
-                <div class="link-btn-left">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <span>公司介紹</span>
-                </div>
-                <i class="fa-solid fa-chevron-down arrow-icon" id="accordion-arrow"></i>
-            </div>
-            
-            <div class="accordion-content" id="accordion-content">
-                <div class="service-header">
-                    睿立｜工廠法規政策顧問，協助企業轉型與體面退場
-                </div>
-
-                <div class="company-block">
-                    <div class="company-title">
-                        <i class="fa-solid fa-building-user"></i> 睿立資產管理顧問有限公司
-                    </div>
-                    <div class="company-desc">
-                        在法規趨嚴與產業轉型的交會點，睿立為企業提供最具實戰力的「決策支持」。我們擅長在高壓環境下剖析高複雜度案件，當企業面臨行政瓶頸或法規卡關時，能第一時間精準介入、執行緊急救援，協助企業化解危機、突破重圍。
-                    </div>
-                    <div class="service-items">
-                        <strong>服務項目：</strong>地政士相關服務、特定工廠登記/變更、一般工廠登記/變更、用地計劃變更、興辦事業計劃、毗鄰變更、補照、容許、指定建築線
-                    </div>
-                </div>
-
-                <div class="company-block">
-                    <div class="company-title">
-                        <i class="fa-solid fa-leaf"></i> 元業綠能驗證有限公司
-                    </div>
-                    <div class="company-desc">
-                        面對全球淨零減碳的國際通牒，許多企業陷入「想轉型卻不知從何著手」的困境。元業綠能不僅是企業的綠色顧問，更是具備國際標準主導稽核實力的技術夥伴。我們致力於為企業提供「ESG 無痛轉型」的整合解方，協助企業精準對接政府補助資源，將碳排與政策壓力，轉化為產業升級的最佳動力。
-                    </div>
-                    <div class="service-items">
-                        <strong>服務項目：</strong>工廠補助、ESCO能源技術服務、ISO50001能源管理系統、ISO14064-1、ISO14064-2、ISO14067、ISO14001、消防設備工程、太陽能自建規劃
-                    </div>
-                </div>
-
-                <div class="company-block">
-                    <div class="company-title">
-                        <i class="fa-solid fa-landmark"></i> 天梁不動產股份有限公司
-                    </div>
-                    <div class="company-desc">
-                        專注於一般市場不敢碰、法規高度限制的土地與工廠領域，天梁為客戶提供超脫傳統買賣的「戰略顧問服務」。我們深知土地凝聚著數十年的汗水與心血；面對繁複法規與僵局，天梁在關鍵時刻精準介入，協助企業防禦風險、降至最小傷害，守護資產應有的尊嚴與價值。
-                    </div>
-                    <div class="service-items">
-                        <strong>服務項目：</strong> 特殊不動產買賣、稅務規劃、勞資調解、公司清算、體面退場。
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <a href="https://www.yuanyeh.com.tw" target="_blank" class="link-btn">
             <div class="link-btn-left">
                 <i class="fa-solid fa-globe"></i>
@@ -1282,7 +1212,62 @@
             </div>
         </div>
 
-        <!-- 服務項目（移至歷史沿革下方，可展開與收起） -->
+        <!-- 公司介紹（移至服務項目上方，可展開與收起） -->
+        <div class="a4-section">
+            <div class="a4-section-title a4-collapsible-header" onclick="toggleA4Section('company-intro-body', 'company-intro-arrow', 'company-intro-toggle-text')">
+                <div class="a4-collapsible-left">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>公司介紹</span>
+                </div>
+                <div class="a4-collapsible-right">
+                    <span id="company-intro-toggle-text">展開內容</span>
+                    <i class="fa-solid fa-chevron-down" id="company-intro-arrow"></i>
+                </div>
+            </div>
+            <div class="a4-collapsible-body" id="company-intro-body">
+                <div class="service-header">
+                    睿立｜工廠法規政策顧問，協助企業轉型與體面退場
+                </div>
+
+                <div class="company-block">
+                    <div class="company-title">
+                        <i class="fa-solid fa-building-user"></i> 睿立資產管理顧問有限公司
+                    </div>
+                    <div class="company-desc">
+                        在法規趨嚴與產業轉型的交會點，睿立為企業提供最具實戰力的「決策支持」。我們擅長在高壓環境下剖析高複雜度案件，當企業面臨行政瓶頸或法規卡關時，能第一時間精準介入、執行緊急救援，協助企業化解危機、突破重圍。
+                    </div>
+                    <div class="service-items">
+                        <strong>服務項目：</strong>地政士相關服務、特定工廠登記/變更、一般工廠登記/變更、用地計劃變更、興辦事業計劃、毗鄰變更、補照、容許、指定建築線
+                    </div>
+                </div>
+
+                <div class="company-block">
+                    <div class="company-title">
+                        <i class="fa-solid fa-leaf"></i> 元業綠能驗證有限公司
+                    </div>
+                    <div class="company-desc">
+                        面對全球淨零減碳的國際通牒，許多企業陷入「想轉型卻不知從何著手」的困境。元業綠能不僅是企業的綠色顧問，更是具備國際標準主導稽核實力的技術夥伴。我們致力於為企業提供「ESG 無痛轉型」的整合解方，協助企業精準對接政府補助資源，將碳排與政策壓力，轉化為產業升級的最佳動力。
+                    </div>
+                    <div class="service-items">
+                        <strong>服務項目：</strong>工廠補助、ESCO能源技術服務、ISO50001能源管理系統、ISO14064-1、ISO14064-2、ISO14067、ISO14001、消防設備工程、太陽能自建規劃
+                    </div>
+                </div>
+
+                <div class="company-block">
+                    <div class="company-title">
+                        <i class="fa-solid fa-landmark"></i> 天梁不動產股份有限公司
+                    </div>
+                    <div class="company-desc">
+                        專注於一般市場不敢碰、法規高度限制的土地與工廠領域，天梁為客戶提供超脫傳統買賣的「戰略顧問服務」。我們深知土地凝聚著數十年的汗水與心血；面對繁複法規與僵局，天梁在關鍵時刻精準介入，協助企業防禦風險、降至最小傷害，守護資產應有的尊嚴與價值。
+                    </div>
+                    <div class="service-items">
+                        <strong>服務項目：</strong>特殊不動產買賣、稅務規劃、勞資調解、公司清算、體面退場。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 服務項目（可展開與收起） -->
         <div class="a4-section">
             <div class="a4-section-title a4-collapsible-header" onclick="toggleA4Section('service-body', 'service-arrow', 'service-toggle-text')">
                 <div class="a4-collapsible-left">
@@ -1364,18 +1349,6 @@
 <div class="toast" id="toast">已複製到剪貼簿</div>
 
 <script>
-    function toggleAccordion() {
-        const content = document.getElementById('accordion-content');
-        const arrow = document.getElementById('accordion-arrow');
-        content.classList.toggle('open');
-        
-        if (content.classList.contains('open')) {
-            arrow.style.transform = 'rotate(180deg)';
-        } else {
-            arrow.style.transform = 'rotate(0deg)';
-        }
-    }
-
     function toggleA4Section(bodyId, arrowId, labelId) {
         const body = document.getElementById(bodyId);
         const arrow = document.getElementById(arrowId);
