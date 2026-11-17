@@ -905,15 +905,15 @@
             margin-top: 3px;
         }
 
-        /* 2027 主力項目：前 6 項三欄對齊 + 第 7 項全寬重點橫列 */
-        .priority-grid-7 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px 16px;
+        /* 2027 主力項目：5 項均勻自動換行對齊 */
+        .priority-flex-5 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
             list-style: none;
         }
 
-        .priority-grid-7 li {
+        .priority-flex-5 li {
             font-size: 13px;
             font-weight: 600;
             color: #1e293b;
@@ -922,21 +922,12 @@
             line-height: 1.5;
         }
 
-        .priority-grid-7 li::before {
+        .priority-flex-5 li::before {
             content: "•";
             position: absolute;
             left: 0;
             color: #d97706;
             font-weight: 900;
-        }
-
-        .priority-grid-7 li.full-span-item {
-            grid-column: 1 / -1;
-            margin-top: 2px;
-            padding-top: 8px;
-            border-top: 1px dashed #e2e8f0;
-            color: #0f766e;
-            font-weight: 700;
         }
 
         /* BNI 目標 & 個人目標：左右雙欄線條分割 */
@@ -980,7 +971,7 @@
             color: #0f172a;
         }
 
-        /* 成就與指標案例 */
+        /* 成就與指標案例：4 項 2x2 田字型網格 */
         .gains-achieve-summary {
             background: #f8fafc;
             padding: 12px 18px;
@@ -997,35 +988,77 @@
             color: #0f766e;
         }
 
-        .case-columns {
+        .case-grid-4 {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        .case-col-item {
-            padding: 14px 16px;
+        .case-grid-item {
+            padding: 15px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .case-grid-item:nth-child(odd) {
             border-right: 1px solid #e2e8f0;
         }
 
-        .case-col-item:last-child {
-            border-right: none;
+        .case-grid-item:nth-last-child(-n+2) {
+            border-bottom: none;
         }
 
-        .case-col-title {
+        .case-grid-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .case-num-badge {
+            background: #0f766e;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .case-grid-title {
             font-size: 13.5px;
             font-weight: 800;
             color: #0f172a;
-            margin-bottom: 6px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #0f766e;
-            display: inline-block;
         }
 
-        .case-col-desc {
+        .case-detail-row {
             font-size: 12.5px;
+            line-height: 1.6;
             color: #475569;
-            line-height: 1.65;
             text-align: justify;
+        }
+
+        .case-detail-row strong {
+            color: #334155;
+            font-weight: 700;
+        }
+
+        .case-detail-win {
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #fffbeb;
+            border-left: 3px solid #d97706;
+            padding: 6px 10px;
+            border-radius: 0 8px 8px 0;
+            text-align: justify;
+        }
+
+        .case-detail-win strong {
+            color: #b45309;
+            font-weight: 800;
         }
 
         /* 興趣、人際、技巧：企業級規格表 */
@@ -1070,9 +1103,8 @@
             }
             .a4-info-grid,
             .a4-two-col,
-            .priority-grid-7,
             .exec-split-cols,
-            .case-columns {
+            .case-grid-4 {
                 grid-template-columns: 1fr;
             }
             .kpi-strip {
@@ -1086,11 +1118,13 @@
                 border-right: none;
                 border-bottom: 1px solid #e2e8f0;
             }
-            .case-col-item {
+            .case-grid-item:nth-child(odd) {
                 border-right: none;
+            }
+            .case-grid-item:nth-last-child(-n+2) {
                 border-bottom: 1px solid #e2e8f0;
             }
-            .case-col-item:last-child {
+            .case-grid-item:last-child {
                 border-bottom: none;
             }
             .spec-table-row {
@@ -1608,20 +1642,18 @@
                             <div class="kpi-label">地政士業務</div>
                         </div>
                         <div class="kpi-cell">
-                            <div class="kpi-num">2.8%</div>
-                            <div class="kpi-label">其他0.3%</div>
+                            <div class="kpi-num">0.3%</div>
+                            <div class="kpi-label">其他</div>
                         </div>
                     </div>
 
                     <div class="exec-sub-caption">2027 主力項目</div>
-                    <ul class="priority-grid-7">
-                        <li>工廠買賣</li>
-                        <li>毗鄰變更</li>
-                        <li>用地計畫變更</li>
-                        <li>興辦事業計畫</li>
+                    <ul class="priority-flex-5">
+                        <li>土地變更</li>
+                        <li>土地/工廠買賣</li>
                         <li>一般工廠登記/變更</li>
                         <li>特定工廠登記/變更</li>
-                        <li class="full-span-item">太陽能自建（ESCO補助＋工程＋系統）</li>
+                        <li>太陽能自建補助與規劃</li>
                     </ul>
                 </div>
 
@@ -1631,7 +1663,7 @@
                         <div class="exec-category-title" style="margin-bottom: 10px;">BNI 目標</div>
                         <ul class="clean-bullet-list">
                             <li>工廠法規政策產業服務鏈共同設櫃參展。</li>
-                            <li>個人 90% 以上案件來自 BNI。</li>
+                            <li>畢業至今個人 90% 以上案件來自 BNI。</li>
                         </ul>
                     </div>
                     <div class="exec-split-col">
@@ -1658,18 +1690,41 @@
                     <div><strong>核心定位｜</strong>專業、技術、結構僅此一家，找不到競爭對手，同業處理不了的案件都交給我們。</div>
                 </div>
 
-                <div class="case-columns">
-                    <div class="case-col-item">
-                        <div class="case-col-title">案例『農業群聚』</div>
-                        <div class="case-col-desc">前代辦處理多年，客戶請許多人去喬，最後代辦竟送了遷廠計畫書，3000坪工廠幾乎沒救。睿立2025年3月接手簽約、2週送計畫書、7月現勘通過。</div>
+                <div class="case-grid-4">
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">案例一</span>
+                            <span class="case-grid-title">特定工廠登記｜設備組裝業</span>
+                        </div>
+                        <div class="case-detail-row"><strong>問題：</strong>農業群聚區工廠，過去委外辦理五年未果，甚至差點被迫走上遷廠計畫。</div>
+                        <div class="case-detail-win"><strong>戰績：</strong>睿立接手後 1 年內成功保下 3,000 坪廠房，成為全台南唯二通過案例（即將領證）。</div>
                     </div>
-                    <div class="case-col-item">
-                        <div class="case-col-title">案例『特登亂過戶』</div>
-                        <div class="case-col-desc">起初客戶比價找了比我們便宜的代書過戶，結果不但要被廢止、稅金更是要140多萬。睿立去地政把案子撈出來重做，保住特登並且取得免稅證明。</div>
+
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">案例二</span>
+                            <span class="case-grid-title">一般工廠登記｜橡膠墊片業</span>
+                        </div>
+                        <div class="case-detail-row"><strong>問題：</strong>案件卡關一年多無法核准，經會計師強力推薦轉介睿立。</div>
+                        <div class="case-detail-win"><strong>戰績：</strong>精準釐清法規盲點，接手送件後僅 3 週即順利通過。</div>
                     </div>
-                    <div class="case-col-item">
-                        <div class="case-col-title">案例『土地變更』</div>
-                        <div class="case-col-desc">客戶土地卡一塊沒有地號的土地，弄了兩年都無法指定建築線，案子到我們手上兩星期就解開了，同時處理母親名下土地做節稅規劃。</div>
+
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">案例三</span>
+                            <span class="case-grid-title">土地變更｜蔬果集貨場</span>
+                        </div>
+                        <div class="case-detail-row"><strong>問題：</strong>歷經五年多方諮詢仍無法解決「指定建築線處無地號土地」問題而長期卡件。</div>
+                        <div class="case-detail-win"><strong>戰績：</strong>接手後 2 週火速解除無地號難題，同步完成土地變更並協助繼承節稅 100 多萬元。</div>
+                    </div>
+
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">案例四</span>
+                            <span class="case-grid-title">特登工廠過戶｜水泥管製造</span>
+                        </div>
+                        <div class="case-detail-row"><strong>問題：</strong>傳統純地政思維直接辦理地主特登工廠過戶給二代，導致面臨 100 多萬重稅及特登資格遭撤銷的危機。</div>
+                        <div class="case-detail-win"><strong>戰績：</strong>緊急從地政事務所撤件重做，透過跨領域法稅規劃，達成非農用土地移轉免稅，並完整保住特登資格。</div>
                     </div>
                 </div>
             </div>
