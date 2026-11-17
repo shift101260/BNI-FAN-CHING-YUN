@@ -799,7 +799,7 @@
             top: 2px;
         }
 
-        /* ====== GAINS 工作表：極簡顧問年報級線條網格樣式（無雜亂框框） ====== */
+        /* ====== GAINS 工作表：極簡顧問年報級線條網格樣式 ====== */
         .gains-letter {
             display: inline-flex;
             align-items: center;
@@ -814,7 +814,6 @@
             flex-shrink: 0;
         }
 
-        /* 統一結構化表格容器（外框僅一層細線，內部以細線分隔） */
         .exec-sheet {
             border: 1px solid #cbd5e1;
             border-radius: 12px;
@@ -872,7 +871,7 @@
             margin-bottom: 8px;
         }
 
-        /* 2026 營收分佈：純淨數據指標列（無外框，僅細垂直分隔線） */
+        /* 2026 營收分佈：純淨數據指標列 */
         .kpi-strip {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -906,15 +905,15 @@
             margin-top: 3px;
         }
 
-        /* 2027 主力項目：俐落無框雙欄條列 */
-        .clean-two-col-list {
+        /* 2027 主力項目：前 6 項三欄對齊 + 第 7 項全寬重點橫列 */
+        .priority-grid-7 {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 7px 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px 16px;
             list-style: none;
         }
 
-        .clean-two-col-list li {
+        .priority-grid-7 li {
             font-size: 13px;
             font-weight: 600;
             color: #1e293b;
@@ -923,12 +922,21 @@
             line-height: 1.5;
         }
 
-        .clean-two-col-list li::before {
+        .priority-grid-7 li::before {
             content: "•";
             position: absolute;
             left: 0;
             color: #d97706;
             font-weight: 900;
+        }
+
+        .priority-grid-7 li.full-span-item {
+            grid-column: 1 / -1;
+            margin-top: 2px;
+            padding-top: 8px;
+            border-top: 1px dashed #e2e8f0;
+            color: #0f766e;
+            font-weight: 700;
         }
 
         /* BNI 目標 & 個人目標：左右雙欄線條分割 */
@@ -972,7 +980,7 @@
             color: #0f172a;
         }
 
-        /* 成就與指標案例：無多餘卡片外框，採用三欄細分隔線排版 */
+        /* 成就與指標案例 */
         .gains-achieve-summary {
             background: #f8fafc;
             padding: 12px 18px;
@@ -1020,7 +1028,7 @@
             text-align: justify;
         }
 
-        /* 興趣、人際、技巧：企業級規格表（左欄項目名稱、右欄內容） */
+        /* 興趣、人際、技巧：企業級規格表 */
         .spec-table-row {
             display: grid;
             grid-template-columns: 110px 1fr;
@@ -1062,7 +1070,7 @@
             }
             .a4-info-grid,
             .a4-two-col,
-            .clean-two-col-list,
+            .priority-grid-7,
             .exec-split-cols,
             .case-columns {
                 grid-template-columns: 1fr;
@@ -1552,7 +1560,7 @@
     </div>
 </div>
 
-<!-- GAINS收穫工作表 A4 彈窗 Modal（顧問年報級極簡網格排版） -->
+<!-- GAINS收穫工作表 A4 彈窗 Modal -->
 <div id="gainsModal" class="modal" onclick="closeDocModal('gainsModal')">
     <span class="modal-close" onclick="closeDocModal('gainsModal')">&times;</span>
     <div class="a4-paper" onclick="event.stopPropagation()">
@@ -1577,40 +1585,43 @@
                         <div class="exec-salary-inline">目標個人年薪：500 萬</div>
                     </div>
 
-                    <div class="exec-sub-caption">2026 營收分佈實績</div>
+                    <div class="exec-sub-caption">2026 營收分佈</div>
                     <div class="kpi-strip">
                         <div class="kpi-cell">
-                            <div class="kpi-num">31.3%</div>
+                            <div class="kpi-num">29.2%</div>
                             <div class="kpi-label">土地變更</div>
                         </div>
                         <div class="kpi-cell">
-                            <div class="kpi-num">25.5%</div>
+                            <div class="kpi-num">23.7%</div>
                             <div class="kpi-label">工廠買賣</div>
                         </div>
                         <div class="kpi-cell">
-                            <div class="kpi-num">23.5%</div>
+                            <div class="kpi-num">31.2%</div>
                             <div class="kpi-label">特定工廠登記</div>
                         </div>
                         <div class="kpi-cell">
-                            <div class="kpi-num">12.3%</div>
+                            <div class="kpi-num">11.5%</div>
                             <div class="kpi-label">補助</div>
                         </div>
                         <div class="kpi-cell">
-                            <div class="kpi-num">4.5%</div>
+                            <div class="kpi-num">4.2%</div>
                             <div class="kpi-label">地政士業務</div>
                         </div>
                         <div class="kpi-cell">
                             <div class="kpi-num">2.8%</div>
-                            <div class="kpi-label">改善計畫</div>
+                            <div class="kpi-label">其他0.3%</div>
                         </div>
                     </div>
 
                     <div class="exec-sub-caption">2027 主力項目</div>
-                    <ul class="clean-two-col-list">
-                        <li>工廠登記</li>
-                        <li>土地變更</li>
+                    <ul class="priority-grid-7">
                         <li>工廠買賣</li>
-                        <li>太陽能自建（ESCO補助＋工程＋系統）</li>
+                        <li>毗鄰變更</li>
+                        <li>用地計畫變更</li>
+                        <li>興辦事業計畫</li>
+                        <li>一般工廠登記/變更</li>
+                        <li>特定工廠登記/變更</li>
+                        <li class="full-span-item">太陽能自建（ESCO補助＋工程＋系統）</li>
                     </ul>
                 </div>
 
