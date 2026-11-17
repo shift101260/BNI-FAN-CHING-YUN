@@ -574,7 +574,6 @@
             padding-left: 6px;
         }
 
-        /* 電腦版 Grid 欄位與順序配置：上排 2017, 2021, 2024；中間魚骨；下排 2019, 2022 */
         .node-2017 { grid-column: 1 / 3; order: 1; }
         .node-2021 { grid-column: 3 / 5; order: 2; }
         .node-2024 { grid-column: 5 / 7; order: 3; }
@@ -594,7 +593,6 @@
         .node-2019 { grid-column: 2 / 4; order: 5; }
         .node-2022 { grid-column: 4 / 6; order: 6; }
 
-        /* 魚尾（左側分叉） */
         .fishbone-tail {
             position: absolute;
             left: -12px;
@@ -607,7 +605,6 @@
             transform: skewX(-12deg);
         }
 
-        /* 魚頭（右側目標箭頭） */
         .fishbone-head {
             position: absolute;
             right: -54px;
@@ -684,7 +681,6 @@
             line-height: 1.45;
         }
 
-        /* 斜向魚刺連接線（上排往右下斜插主幹） */
         .top-node .fishbone-rib-top {
             height: 22px;
             position: relative;
@@ -715,7 +711,6 @@
             z-index: 3;
         }
 
-        /* 斜向魚刺連接線（下排往右上斜插主幹） */
         .bottom-node .fishbone-rib-bottom {
             height: 22px;
             position: relative;
@@ -804,36 +799,7 @@
             top: 2px;
         }
 
-        .a4-service-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .a4-service-card {
-            background: #ffffff;
-            border: 1.5px solid #e2e8f0;
-            border-top: 4px solid #0f766e;
-            border-radius: 18px;
-            padding: 14px 16px;
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
-        }
-
-        .a4-service-card h4 {
-            font-size: 14px;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 6px;
-        }
-
-        .a4-service-card p {
-            font-size: 12.5px;
-            color: #475569;
-            line-height: 1.55;
-            text-align: justify;
-        }
-
-        /* ====== GAINS 工作表專屬樣式 ====== */
+        /* ====== GAINS 工作表專屬樣式（優化後的 2027 目標排版） ====== */
         .gains-letter {
             display: inline-flex;
             align-items: center;
@@ -848,9 +814,16 @@
             flex-shrink: 0;
         }
 
-        .gains-goal-grid {
+        /* 2027 目標：上方全寬主卡（公司目標） + 下方左右雙欄（BNI / 個人） */
+        .gains-goal-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .gains-goal-subgrid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
         }
 
@@ -859,24 +832,171 @@
             border: 1.5px solid #e2e8f0;
             border-top: 4px solid #d97706;
             border-radius: 16px;
-            padding: 12px 14px;
+            padding: 15px 18px;
+        }
+
+        .gains-goal-card.company-main-card {
+            background: #ffffff;
+            border-top: 4px solid #0f766e;
+            box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+        }
+
+        .gains-goal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #cbd5e1;
         }
 
         .gains-goal-tag {
-            font-size: 12px;
+            font-size: 13.5px;
             font-weight: 800;
             color: #0f766e;
-            margin-bottom: 5px;
             display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gains-salary-badge {
+            background: #fffbeb;
+            border: 1px solid #f59e0b;
+            color: #b45309;
+            font-size: 12.5px;
+            font-weight: 800;
+            padding: 3px 12px;
+            border-radius: 999px;
+            display: inline-flex;
             align-items: center;
             gap: 5px;
         }
 
-        .gains-goal-val {
-            font-size: 13px;
+        .gains-goal-block {
+            margin-bottom: 12px;
+        }
+
+        .gains-goal-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .gains-sub-label {
+            font-size: 12px;
+            font-weight: 800;
+            color: #475569;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .gains-sub-label::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #d97706;
+        }
+
+        /* 2026 營收分佈數據徽章列 */
+        .revenue-mix-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .revenue-chip {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 12px;
             font-weight: 700;
-            color: #0f172a;
+            color: #1e293b;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .revenue-chip span {
+            color: #0f766e;
+            font-weight: 900;
+        }
+
+        /* 2027 主力項目標籤列 */
+        .focus-pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px 12px;
+        }
+
+        .focus-pillar-item {
+            background: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            color: #0f766e;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .focus-pillar-item i {
+            font-size: 11px;
+            color: #0d9488;
+        }
+
+        /* BNI / 個人目標條列清單 */
+        .gains-goal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .gains-goal-row {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e293b;
             line-height: 1.55;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .goal-num-badge {
+            background: #0f766e;
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .goal-cat-pill {
+            background: #e2e8f0;
+            color: #0f172a;
+            font-size: 11.5px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 6px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .goal-cat-pill.personal-dream {
+            background: #fef3c7;
+            color: #b45309;
         }
 
         .gains-achieve-box {
@@ -1005,13 +1125,13 @@
             }
             .a4-info-grid,
             .a4-two-col,
-            .a4-service-grid,
-            .gains-goal-grid,
+            .gains-goal-subgrid,
+            .focus-pillar-grid,
             .gains-case-grid {
                 grid-template-columns: 1fr;
             }
 
-            /* 手機版魚骨圖自動轉為直向時間順序（2017 → 2019 → 2021 → 2022 → 2024 → 睿立集團） */
+            /* 手機版魚骨圖自動轉為直向時間順序 */
             .fishbone-chart {
                 display: flex;
                 flex-direction: column;
@@ -1059,7 +1179,6 @@
                 background: #ffffff;
                 border: 2.5px solid #d97706;
             }
-            /* 手機版魚骨尾端接上「睿立集團」目標標籤 */
             .fishbone-spine {
                 order: 99;
                 height: auto;
@@ -1323,7 +1442,6 @@
             <div class="a4-collapsible-body" id="history-body">
                 <div class="fishbone-wrapper">
                     <div class="fishbone-chart">
-                        <!-- 2017年（電腦上排第1／手機第1） -->
                         <div class="fishbone-node top-node node-2017">
                             <div class="fishbone-card">
                                 <div class="fishbone-year">2017年</div>
@@ -1333,7 +1451,6 @@
                             <div class="fishbone-rib-top"></div>
                         </div>
 
-                        <!-- 2019年（電腦下排第1／手機第2） -->
                         <div class="fishbone-node bottom-node node-2019">
                             <div class="fishbone-rib-bottom"></div>
                             <div class="fishbone-card">
@@ -1342,7 +1459,6 @@
                             </div>
                         </div>
 
-                        <!-- 2021年（電腦上排第2／手機第3） -->
                         <div class="fishbone-node top-node node-2021">
                             <div class="fishbone-card">
                                 <div class="fishbone-year">2021年</div>
@@ -1352,7 +1468,6 @@
                             <div class="fishbone-rib-top"></div>
                         </div>
 
-                        <!-- 2022年（電腦下排第2／手機第4） -->
                         <div class="fishbone-node bottom-node node-2022">
                             <div class="fishbone-rib-bottom"></div>
                             <div class="fishbone-card">
@@ -1362,7 +1477,6 @@
                             </div>
                         </div>
 
-                        <!-- 2024年（電腦上排第3／手機第5） -->
                         <div class="fishbone-node top-node node-2024">
                             <div class="fishbone-card">
                                 <div class="fishbone-year">2024年</div>
@@ -1371,7 +1485,6 @@
                             <div class="fishbone-rib-top"></div>
                         </div>
 
-                        <!-- 中央魚骨主幹 + 魚尾 + 魚頭 -->
                         <div class="fishbone-spine">
                             <div class="fishbone-tail"></div>
                             <div class="fishbone-head">睿立集團</div>
@@ -1381,7 +1494,7 @@
             </div>
         </div>
 
-        <!-- 公司介紹（移至服務項目上方，可展開與收起） -->
+        <!-- 公司介紹 -->
         <div class="a4-section">
             <div class="a4-section-title a4-collapsible-header" onclick="toggleA4Section('company-intro-body', 'company-intro-arrow', 'company-intro-toggle-text')">
                 <div class="a4-collapsible-left">
@@ -1486,28 +1599,77 @@
             <div class="a4-sub-title">BNI富鼎分會｜特登農地工廠顧問業</div>
         </div>
 
-        <!-- G - 2027 目標 -->
+        <!-- G - 2027 目標（上方全寬主卡 + 下方左右雙欄） -->
         <div class="a4-section">
             <div class="a4-section-title">
                 <span class="gains-letter">G</span>
                 <span>2027 目標（Goals）</span>
             </div>
-            <div class="gains-goal-grid">
-                <div class="gains-goal-card">
-                    <div class="gains-goal-tag"><i class="fa-solid fa-building"></i> 公司目標</div>
-                    <div class="gains-goal-val">2026營收分佈｜土地變更31.3%、工廠買賣25.5、特定工廠登記23.5%、補助12.3%、地政士業務4.5%、改善計畫2.8%。</div>
-                    <div class="gains-goal-val">2027主力項目｜工廠登記、土地變更、工廠買賣、太陽能自建(ESCO補助＋工程＋系統)。</div>
-                    <div class="gains-goal-val">個人年薪 500 萬。</div>
+            
+            <div class="gains-goal-layout">
+                <!-- 上方全寬：公司目標 -->
+                <div class="gains-goal-card company-main-card">
+                    <div class="gains-goal-header">
+                        <div class="gains-goal-tag"><i class="fa-solid fa-building"></i> 公司目標</div>
+                        <div class="gains-salary-badge"><i class="fa-solid fa-coins"></i> 個人年薪 500 萬</div>
+                    </div>
+
+                    <div class="gains-goal-block">
+                        <div class="gains-sub-label">2026 營收分佈實績</div>
+                        <div class="revenue-mix-grid">
+                            <div class="revenue-chip">土地變更 <span>31.3%</span></div>
+                            <div class="revenue-chip">工廠買賣 <span>25.5%</span></div>
+                            <div class="revenue-chip">特定工廠登記 <span>23.5%</span></div>
+                            <div class="revenue-chip">補助 <span>12.3%</span></div>
+                            <div class="revenue-chip">地政士業務 <span>4.5%</span></div>
+                            <div class="revenue-chip">改善計畫 <span>2.8%</span></div>
+                        </div>
+                    </div>
+
+                    <div class="gains-goal-block">
+                        <div class="gains-sub-label">2027 主力項目</div>
+                        <div class="focus-pillar-grid">
+                            <div class="focus-pillar-item"><i class="fa-solid fa-circle-check"></i> 工廠登記</div>
+                            <div class="focus-pillar-item"><i class="fa-solid fa-circle-check"></i> 土地變更</div>
+                            <div class="focus-pillar-item"><i class="fa-solid fa-circle-check"></i> 工廠買賣</div>
+                            <div class="focus-pillar-item"><i class="fa-solid fa-circle-check"></i> 太陽能自建（ESCO補助＋工程＋系統）</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="gains-goal-card">
-                    <div class="gains-goal-tag"><i class="fa-solid fa-handshake"></i> BNI 目標</div>
-                    <div class="gains-goal-val">1.工廠法規政策產業服務鏈共同設櫃參展。</div>
-                    <div class="gains-goal-val">2.個人 90% 以上案件來自 BNI。</div>
-                </div>
-                <div class="gains-goal-card">
-                    <div class="gains-goal-tag"><i class="fa-solid fa-compass"></i> 個人目標</div>
-                    <div class="gains-goal-val">1.提升｜丙級會計、不動產經紀人、成大EMBA。</div>
-                    <div class="gains-goal-val">2.虛榮｜藍寶堅尼休旅車、100坪房子、芬蘭、埃及。</div>
+
+                <!-- 下方雙欄：BNI 目標 & 個人目標 -->
+                <div class="gains-goal-subgrid">
+                    <div class="gains-goal-card">
+                        <div class="gains-goal-header">
+                            <div class="gains-goal-tag"><i class="fa-solid fa-handshake"></i> BNI 目標</div>
+                        </div>
+                        <div class="gains-goal-list">
+                            <div class="gains-goal-row">
+                                <span class="goal-num-badge">1</span>
+                                <span>工廠法規政策產業服務鏈共同設櫃參展。</span>
+                            </div>
+                            <div class="gains-goal-row">
+                                <span class="goal-num-badge">2</span>
+                                <span>個人 90% 以上案件來自 BNI。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gains-goal-card">
+                        <div class="gains-goal-header">
+                            <div class="gains-goal-tag"><i class="fa-solid fa-compass"></i> 個人目標</div>
+                        </div>
+                        <div class="gains-goal-list">
+                            <div class="gains-goal-row">
+                                <span class="goal-cat-pill">提升</span>
+                                <span>丙級會計、不動產經紀人、成大EMBA。</span>
+                            </div>
+                            <div class="gains-goal-row">
+                                <span class="goal-cat-pill personal-dream">虛榮</span>
+                                <span>藍寶堅尼休旅車、100坪房子、芬蘭、埃及。</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
