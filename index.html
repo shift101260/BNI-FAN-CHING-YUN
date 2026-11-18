@@ -135,7 +135,7 @@
     </div>
 
     <div class="bio-quote">
-        「先決定成為誰，再長成那個樣子；我是品牌價值與策略的規劃者，更是將專業轉化為接地氣語言的橋樑。」
+        「先決定成為誰，再長成那個樣子；我是品牌價值與策略的規劃者，更是將專業轉化為接地氣語言的轉譯橋樑。」
     </div>
 
     <!-- 快捷動作按鈕 -->
@@ -262,32 +262,120 @@
 <!-- 夥伴自我介紹彈窗 Modal -->
 <div id="partnerModal" class="modal" onclick="closeDocModal('partnerModal')">
     <span class="modal-close" onclick="closeDocModal('partnerModal')">&times;</span>
-    <div class="a4-paper" style="min-height: auto; max-width: 540px;" onclick="event.stopPropagation()">
+    <div class="a4-paper" onclick="event.stopPropagation()">
         <div class="a4-header" style="align-items: center; text-align: center;">
-            <div class="a4-badge" id="p-chapter">BNI 富鼎分會 ｜ 產業鏈夥伴</div>
+            <div class="a4-badge">BNI 富鼎分會 ｜ 工廠法規政策產業服務鏈</div>
             <img id="p-photo" src="avatar.jpg" alt="夥伴頭像" class="avatar" style="width: 100px; height: 100px; margin: 8px 0 12px;">
             <div class="a4-main-title" id="p-name" style="font-size: 22px;">夥伴姓名</div>
             <div class="a4-sub-title" id="p-industry">代表行業別</div>
-            <div id="p-company" style="font-size: 13px; color: #64748b; font-weight: 700; margin-top: 4px;">公司名稱</div>
+            <div id="p-company" style="font-size: 13.5px; color: #475569; font-weight: 700; margin-top: 4px;">公司名稱</div>
         </div>
 
+        <!-- 1. 聯絡資訊（橫排三個框框：電話、信箱、Google地址） -->
         <div class="a4-section">
             <div class="a4-section-title">
-                <i class="fa-solid fa-user-tie"></i>
-                <span>會員自我介紹</span>
+                <i class="fa-solid fa-address-card"></i>
+                <span>聯絡資訊</span>
+            </div>
+            <div class="quick-actions" style="margin-bottom: 12px;">
+                <a id="p-phone-link" href="tel:" class="action-card">
+                    <i class="fa-solid fa-phone action-icon phone"></i>
+                    <span class="action-label">電話</span>
+                    <span class="action-val" id="p-phone-val">0900-000-000</span>
+                    <span class="copy-badge"><i class="fa-regular fa-copy"></i> 複製/撥打</span>
+                </a>
+
+                <a id="p-email-link" href="mailto:" class="action-card">
+                    <i class="fa-solid fa-envelope action-icon email"></i>
+                    <span class="action-label">電子郵件</span>
+                    <span class="action-val" id="p-email-val">email@...</span>
+                    <span class="copy-badge"><i class="fa-regular fa-copy"></i> 複製/寄信</span>
+                </a>
+
+                <a id="p-map-link" href="#" target="_blank" class="action-card">
+                    <i class="fa-solid fa-location-dot action-icon" style="color: #dc2626;"></i>
+                    <span class="action-label">Google地址</span>
+                    <span class="action-val" id="p-address-val">查看地圖</span>
+                    <span class="copy-badge"><i class="fa-solid fa-map-location-dot"></i> 開啟地圖</span>
+                </a>
+            </div>
+
+            <!-- 2. 官方網站 or 社群 -->
+            <a id="p-website-link" href="#" target="_blank" class="link-btn" style="background: #f8fafc;">
+                <div class="link-btn-left">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="p-website-label">官方網站 / 社群連結</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+            </a>
+        </div>
+
+        <!-- 3. 服務項目 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>服務項目</span>
             </div>
             <div class="a4-highlight-box" style="background: #f8fafc;">
-                <div class="a4-highlight-text" id="p-intro" style="font-weight: 500; text-align: justify;">自我介紹內容</div>
+                <div class="a4-highlight-text" id="p-services" style="font-weight: 500; text-align: justify;">服務項目內容</div>
             </div>
         </div>
 
-        <div class="a4-section" style="margin-bottom: 0;">
+        <!-- 4. 成就與指標案例（榮譽 / 4案例，格式同 GAINS 工作表） -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-trophy"></i>
+                <span>成就與指標案例</span>
+            </div>
+            <div class="exec-sheet">
+                <div class="gains-achieve-summary" id="p-honors-container">
+                    <!-- 由 team.js 動態填入榮譽 -->
+                </div>
+                <div class="case-grid-4" id="p-cases-container">
+                    <!-- 由 team.js 動態填入 4 案例 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 引薦提示（格式同十大客戶表） -->
+        <div class="a4-section">
             <div class="a4-section-title">
                 <i class="fa-solid fa-handshake"></i>
-                <span>理想引薦與合作項目</span>
+                <span>引薦提示（Referral Guide）</span>
+            </div>
+            <div class="exec-sheet">
+                <div class="spec-table-row">
+                    <div class="spec-th">一般引薦</div>
+                    <div class="spec-td" id="p-ref-general">一般引薦內容</div>
+                </div>
+                <div class="spec-table-row">
+                    <div class="spec-th">理想引薦</div>
+                    <div class="spec-td" id="p-ref-ideal">理想引薦內容</div>
+                </div>
+                <div class="spec-table-row">
+                    <div class="spec-th" style="color: #b45309;">夢幻引薦</div>
+                    <div class="spec-td highlight-row" id="p-ref-dream">夢幻引薦內容</div>
+                </div>
+                <div class="spec-table-row">
+                    <div class="spec-th" style="color: #dc2626; background: #fef2f2;">壞的引薦</div>
+                    <div class="spec-td" id="p-ref-bad" style="background: #fef2f2; color: #991b1b; font-weight: 700;">壞的引薦內容</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 業務人脈圈前三名（格式同業務人脈圈） -->
+        <div class="a4-section" style="margin-bottom: 0;">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-crown"></i>
+                <span>業務人脈圈前三名（完成人脈圈的關鍵職業）</span>
             </div>
             <div class="a4-highlight-box" style="background: #fffbeb; border-color: #fde68a;">
-                <div class="a4-highlight-text" id="p-referral" style="color: #92400e;">理想引薦對象</div>
+                <div class="a4-highlight-title" style="color: #b45309; margin-bottom: 12px;">
+                    <i class="fa-solid fa-star"></i> TOP 3 核心合作夥伴
+                </div>
+                <div id="p-top3-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;">
+                    <!-- 由 team.js 動態填入 TOP 3 -->
+                </div>
             </div>
         </div>
     </div>
@@ -897,7 +985,7 @@
 <div class="toast" id="toast">已複製到剪貼簿</div>
 
 <!-- 外部載入工廠法規政策產業服務鏈資料 -->
-<script src="./team.js?v=1"></script>
+<script src="./team.js?v=2"></script>
 
 <script>
     function toggleA4Section(bodyId, arrowId, labelId) {
