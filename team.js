@@ -1,17 +1,15 @@
-// 工廠法規政策產業服務鏈｜夥伴資料庫（含防呆與相容性修正版）
-
 const teamMembers = [
     {
         industry: "產物保險業",
         name: "張宏煜",
         company: "國泰世紀產物保險",
         photo: "partner1.jpg",
-        phone: "0900-000-001",
-        email: "partner1@example.com",
-        address: "高雄市前鎮區中華五路",
-        websiteLabel: "國泰產險官網",
-        websiteUrl: "https://www.cathay-ins.com.tw",
-        services: "廠房火險、公共意外責任險、雇主意外責任險、營造綜合險、機械保險與企業團體保險規劃。",
+        phone: "0953702807",
+        email: "clouen@cathay-ins.com.tw",
+        address: "高雄市鳳山區光復路65號5樓",
+        websiteLabel: "Facebook 社群",
+        websiteUrl: "https://www.facebook.com/zhang.hong.yu.162111",
+        services: "車險、商業火險、工程保險、公共意外險、僱主意外險、僱主補償險、產品責任保險。",
         honors: [
             { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
             { badge: "行業榮譽", text: "「專做」產險的業務沒幾個，能深耕 20 年的更是少之又少；憑藉二十年實戰理賠經驗，事故發生時條款判讀精準、理賠無疑慮。" }
@@ -35,15 +33,15 @@ const teamMembers = [
         name: "景國強",
         company: "策識永續人才管理顧問有限公司",
         photo: "partner2.jpg",
-        phone: "0900-000-002",
-        email: "partner2@example.com",
-        address: "高雄市苓雅區",
-        websiteLabel: "策識永續人才官網",
-        websiteUrl: "https://www.google.com/search?q=策識永續人才管理顧問有限公司",
-        services: "企業薪酬制度設計、工作規則與勞動契約健檢、勞資爭議預防、績效考核系統建置與人才培育。",
+        phone: "0917261722",
+        email: "2019jungle@gmail.com",
+        address: "高雄市大樹區中山路三巷485",
+        websiteLabel: "官方網站",
+        websiteUrl: "https://new.cctmcoach.com.tw",
+        services: "AI員工建置、企業數位系統、組織數位轉型、企業AI內訓、企業高階教練、人資輔導規劃、勞動法制度建立、精實生產流程改善、品質管理ISO導入、ESG報告書編寫。",
         honors: [
-            { badge: "BNI榮譽", text: "BNI 富鼎分會產業鏈核心成員。" },
-            { badge: "行業榮譽", text: "協助多家製造業與成長型企業建立合規人事管理制度。" }
+            { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
+            { badge: "行業榮譽", text: "顧問教練群擁有 20 年以上人資實戰經驗，深耕高雄、服務全台中小企業。" }
         ],
         cases: [
             { title: "傳統製造業｜薪資結構與加班費合規重整", problem: "沿用舊制薪資結構，面臨勞檢裁罰與員工離職糾紛風險。", win: "重塑薪資科目與工作規則並完成核備，順利通過勞檢且零爭議。" },
@@ -64,16 +62,233 @@ const teamMembers = [
         name: "鄭勤",
         company: "詠成國際開發有限公司",
         photo: "partner3.jpg",
-        phone: "0900-000-003",
-        email: "partner3@example.com",
-        address: "高雄市",
-        websiteLabel: "詠成國際官網",
-        websiteUrl: "https://www.google.com/search?q=詠成國際開發有限公司",
-        services: "製造業移工引進、特定工廠登記專案移工申請、外籍技術人力媒合、雙語翻譯輔導與宿舍生活管理。",
+        phone: "0931989980",
+        email: "pin.ha@msa.hinet.net",
+        address: "高雄市苓雅區福德一路280號",
+        websiteLabel: "Facebook 社群",
+        websiteUrl: "https://www.facebook.com/qin.zheng2",
+        services: "專營各類外籍人力引進／聘僱／管理（製造業移工、特登工廠專案移工、外籍技術人力媒合）。",
         honors: [
-            { badge: "BNI榮譽", text: "BNI 富鼎分會產業鏈核心成員。" },
-            { badge: "行業榮譽", text: "專精製造業與特登工廠移工配額申請，高核准率實績。" }
+            { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
+            { badge: "行業榮譽", text: "私立就業服務機構評鑑 A 級 - 許可證號 2702。" }
         ],
         cases: [
             { title: "特登農地工廠｜取得特登後首批移工引進", problem: "工廠剛取得特定工廠登記，不熟悉移工名額計算與申請流程。", win: "精準核算 3K 五級制配額，順利引進 8 名產線移工解決缺工危機。" },
-            { title: "金屬加工廠｜中階技術人力
+            { title: "金屬加工廠｜中階技術人力留才轉任", problem: "資深優秀移工即將期滿回國，產線面臨技術斷層。", win: "協助申請轉任外國技術人力，成功留住核心熟手免受年限限制。" },
+            { title: "塑膠射出廠｜急單產線人力快速增補", problem: "接獲海外大單急需夜班作業員，本地招募困難。", win: "啟動國內承接與海外選工雙軌並行，1 個月內補足產線人力。" },
+            { title: "食品製造業｜移工宿舍管理與雙語溝通輔導", problem: "廠內移工生活管理繁瑣，溝通落差影響生產效率。", win: "派駐專業雙語服務人員定期訪視協調，穩定現場出勤與向心力。" }
+        ],
+        referral: {
+            general: "有家庭看護工或一般製造業移工諮詢需求的客戶。",
+            ideal: "已取得特定工廠登記或一般工廠登記、現場長期缺工的製造業老闆。",
+            dream: "擴廠增設新產線、需要大批量引進移工或中階技術人力的製造大廠。",
+            bad: "無工廠登記且不符申請資格、欲非法聘僱外籍人士者。"
+        },
+        top3: ["特登農地工廠顧問", "人力資源管理", "製造業工廠主"]
+    },
+    {
+        industry: "會計師",
+        name: "許毅帆",
+        company: "承毅會計師事務所",
+        photo: "partner4.jpg",
+        phone: "0982824349",
+        email: "chenicash@gmail.com",
+        address: "高雄市苓雅區正言里中正一路284號9樓之1",
+        websiteLabel: "官方網站",
+        websiteUrl: "https://chenicpa.com",
+        services: "記帳、簽證、稅務規劃（財務報表與稅務簽證、工商登記設立變更、股權架構設計與補助核銷簽證）。",
+        honors: [
+            { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
+            { badge: "行業榮譽", text: "第 18 屆高屏地區「傑出經理獎」。" }
+        ],
+        cases: [
+            { title: "精密零件廠｜銀行融資財報簽證專案", problem: "企業欲向銀行申請擴廠貸款，但內外帳混亂無法取得理想額度。", win: "協助帳務整合並出具會計師財報簽證，成功核貸 3,000 萬營運資金。" },
+            { title: "家族傳產工廠｜二代股權傳承與稅務規劃", problem: "第一代股東年事已高，直接贈與或繼承將面臨高額稅負。", win: "透過閉鎖性公司與分年股權架構調整，合法節省數百萬元稅金。" },
+            { title: "自動化設備商｜政府研發補助會計簽證", problem: "申請經濟部補助計畫需專業會計師查核經費核銷。", win: "建立專案獨立帳務並完成簽證，協助客戶順利撥款結案。" },
+            { title: "成長型貿易公司｜境內外公司稅務架構優化", problem: "跨國交易稅負沉重且面臨反避稅法規風險。", win: "重新梳理交易流程與移轉訂價策略，兼顧稅負效率與法規合規。" }
+        ],
+        referral: {
+            general: "新創公司設立登記、記帳報稅或年度稅務申報需求的企業。",
+            ideal: "年營收 3,000 萬以上、需要銀行融資簽證或內控帳務整頓的製造業。",
+            dream: "準備家族企業傳承、股權重組、併購或規劃公開發行的企業集團。",
+            bad: "要求購買發票或從事不法逃漏稅操作之客戶。"
+        },
+        top3: ["特登農地工廠顧問", "地政士", "高資產銀行金融服務"]
+    },
+    {
+        industry: "公共工程業",
+        name: "金芸庭",
+        company: "芊庭開發工程有限公司",
+        photo: "partner5.jpg",
+        phone: "0980692390",
+        email: "a5834798@gmail.com",
+        address: "高雄市小港區過雄街240號",
+        websiteLabel: "Facebook 粉專",
+        websiteUrl: "https://www.facebook.com/p/芊庭開發工程-100089333686359/",
+        services: "營建工程、新建開發、土木工程、鋼構廠房、裝修改建、景觀綠化。",
+        honors: [
+            { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
+            { badge: "行業榮譽", text: "乙級營造牌、會開挖土機的女生。" }
+        ],
+        cases: [
+            { title: "農地變更工廠｜廠區排水與滯洪池工程", problem: "土地變更審查要求完整出流管制與廠區排水設施。", win: "依技師設計精準施工並一次通過驗收，助廠房順利取得使用執照。" },
+            { title: "重型機械廠｜高承載廠區地坪與聯外道路鋪設", problem: "重車頻繁進出導致原有地面龜裂積水，影響貨物運輸。", win: "施作高強度鋼筋混凝土地坪與排水坡度改良，大幅提升廠區安全性。" },
+            { title: "工業區廠房｜基地整地與擋土牆防護工程", problem: "基地高低落差大，雨季有邊坡沖刷風險。", win: "完成基地級配整地與擋土結構施作，確保廠房基礎穩固。" },
+            { title: "地方基礎建設｜道路與側溝改善工程", problem: "工期緊迫且需兼顧周邊通行安全與施工品質。", win: "精準調度機具與工班，提前完工並獲得主辦機關高度肯定。" }
+        ],
+        referral: {
+            general: "有廠區地面修繕、排水溝改善或小型土木整地需求的廠主。",
+            ideal: "正在辦理土地變更、工廠新建或擴建，需要施作排水與基礎土木的業主。",
+            dream: "大型工業區開發、園區道路排水工程或需長期配合土木工程的建設公司。",
+            bad: "無預算概念、要求偷工減料或無合法施工許可之違建工程。"
+        },
+        top3: ["特登農地工廠顧問", "建築師／結構水保技師", "營造／鋼構浪板工程"]
+    },
+    {
+        industry: "高資產銀行金融服務業",
+        name: "李佳怡",
+        company: "銀行／財富管理機構",
+        photo: "partner6.jpg",
+        phone: "0900-000-006",
+        email: "partner6@example.com",
+        address: "高雄市",
+        websiteLabel: "企業金融專頁",
+        websiteUrl: "https://www.google.com",
+        services: "高資產客戶財富管理、企業主資產配置、家族信託與傳承規劃、企業營運周轉金與廠房購置融資專案。",
+        honors: [
+            { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
+            { badge: "行業榮譽", text: "服務多位南台灣製造業企業主，專精資產活化與傳承配置。" }
+        ],
+        cases: [
+            { title: "傳產製造業主｜廠房購置貸款與現金流配置", problem: "企業主欲購置新廠房但不想過度消耗帳上營運現金。", win: "規劃高成數廠房專案貸款並搭配靈活理財配置，兼顧擴廠與流動性。" },
+            { title: "科技業創辦人｜家族信託與二代資產傳承", problem: "擔心子女年輕不善理財或未來婚姻風險影響家族資產。", win: "設立客製化家族信託架構，確保資產依創辦人意志穩健傳承。" },
+            { title: "出口貿易企業｜外匯避險與美元資產配置", problem: "匯率劇烈波動侵蝕出口毛利，閒置外幣資金效益低。", win: "導入外匯避險工具與穩健美元債券配置，穩定企業財務收益。" },
+            { title: "退休工廠老闆｜售廠資金穩健退休現金流", problem: "工廠出售後取得大筆資金，不知如何抗通膨並創造穩定被動收入。", win: "配置多元收益型資產組合，打造每年穩定領息的退休現金流。" }
+        ],
+        referral: {
+            general: "有個人理財規劃、外幣配置或房屋貸款需求的專業人士。",
+            ideal: "有廠房購置貸款、企業周轉金或閒置資金配置需求的中小企業主。",
+            dream: "可投資資產 3,000 萬以上、有家族信託傳承或大額資產活化需求的企業主。",
+            bad: "信用紀錄嚴重瑕疵或尋求非法地下融資管道者。"
+        },
+        top3: ["會計師／記帳士", "特登農地工廠顧問", "地政士"]
+    }
+];
+
+function setSafeText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.innerText = text || '';
+}
+
+function renderTeamGrid() {
+    const container = document.getElementById('team-grid-container');
+    if (!container) return;
+    container.innerHTML = teamMembers.map((member, index) => `
+        <div class="team-member-card" role="button" tabindex="0" onclick="openPartnerModal(${index})">
+            <img src="${member.photo}" alt="${member.industry}" class="team-member-photo" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(member.industry)}&background=0f766e&color=fff&size=120'">
+            <div class="team-member-industry">${member.industry}</div>
+            <div class="team-member-name">${member.name}</div>
+        </div>
+    `).join('');
+}
+
+function openPartnerModal(index) {
+    const member = teamMembers[index];
+    if (!member) return;
+
+    const photoEl = document.getElementById('p-photo');
+    if (photoEl) {
+        photoEl.src = member.photo;
+        photoEl.onerror = function() {
+            this.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.industry)}&background=0f766e&color=fff&size=150`;
+        };
+    }
+    setSafeText('p-name', member.name);
+    setSafeText('p-industry', member.industry);
+    setSafeText('p-company', member.company);
+
+    const cleanPhone = (member.phone || '').replace(/[^0-9+]/g, '');
+    const phoneLink = document.getElementById('p-phone-link');
+    if (phoneLink) {
+        phoneLink.href = `tel:${cleanPhone}`;
+        phoneLink.onclick = function() {
+            if (typeof copyText === 'function') copyText(member.phone, `電話 (${member.phone}) 已複製`);
+        };
+    }
+    setSafeText('p-phone-val', member.phone || '未提供');
+
+    const emailLink = document.getElementById('p-email-link');
+    if (emailLink) {
+        emailLink.href = `mailto:${member.email || ''}`;
+        emailLink.onclick = function() {
+            if (typeof copyText === 'function') copyText(member.email, `信箱 (${member.email}) 已複製`);
+        };
+    }
+    const shortEmail = member.email && member.email.length > 13 ? member.email.slice(0, 11) + '...' : (member.email || '未提供');
+    setSafeText('p-email-val', shortEmail);
+
+    const webLink = document.getElementById('p-website-link');
+    if (webLink) webLink.href = member.websiteUrl || '#';
+    setSafeText('p-website-label', member.websiteLabel || '點擊前往');
+    setSafeText('p-website-val', member.websiteLabel || '點擊前往');
+
+    const mapLink = document.getElementById('p-map-link');
+    if (mapLink) {
+        if (member.address) {
+            mapLink.style.display = 'flex';
+            mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(member.address)}`;
+            setSafeText('p-address-val', member.address);
+            setSafeText('p-address-label', member.address);
+        } else {
+            mapLink.style.display = 'none';
+        }
+    }
+
+    setSafeText('p-services', member.services);
+
+    const honorsEl = document.getElementById('p-honors-container');
+    if (honorsEl) {
+        honorsEl.innerHTML = (member.honors || []).map(h => `<div><strong>${h.badge}｜</strong>${h.text}</div>`).join('');
+    }
+
+    const casesEl = document.getElementById('p-cases-container');
+    if (casesEl) {
+        const caseNumbers = ['案例一', '案例二', '案例三', '案例四'];
+        casesEl.innerHTML = (member.cases || []).map((c, idx) => `
+            <div class="case-grid-item">
+                <div class="case-grid-header">
+                    <span class="case-num-badge">${caseNumbers[idx] || '案例' + (idx + 1)}</span>
+                    <span class="case-grid-title">${c.title}</span>
+                </div>
+                <div class="case-detail-row"><strong>問題：</strong>${c.problem}</div>
+                <div class="case-detail-win"><strong>戰績：</strong>${c.win}</div>
+            </div>
+        `).join('');
+    }
+
+    const ref = member.referral || {};
+    setSafeText('p-ref-general', ref.general);
+    setSafeText('p-ref-ideal', ref.ideal);
+    setSafeText('p-ref-dream', ref.dream);
+    setSafeText('p-ref-bad', ref.bad);
+
+    const top3El = document.getElementById('p-top3-container');
+    if (top3El) {
+        top3El.innerHTML = (member.top3 || []).map((role, idx) => `
+            <div style="background: #ffffff; border: 1.5px solid #f59e0b; border-radius: 12px; padding: 12px 14px; display: flex; align-items: center; gap: 10px;">
+                <span class="case-num-badge" style="background: #d97706;">TOP ${idx + 1}</span>
+                <span style="font-size: 14px; font-weight: 800; color: #0f172a;">${role}</span>
+            </div>
+        `).join('');
+    }
+
+    const modal = document.getElementById('partnerModal');
+    if (modal) {
+        modal.style.display = 'block';
+        modal.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+window.openPartnerModal = openPartnerModal;
+renderTeamGrid();
