@@ -10,12 +10,12 @@ const teamMembers = [
         phone: "0900-000-001",
         email: "partner1@example.com",
         address: "高雄市前鎮區中華五路",
-        websiteLabel: "國泰產險官方網站",
+        websiteLabel: "國泰產險官網",
         websiteUrl: "https://www.cathay-ins.com.tw",
         services: "廠房火險、公共意外責任險、雇主意外責任險、營造綜合險、機械保險與企業團體保險規劃。",
         honors: [
-            { badge: "BNI榮譽", text: "BNI 富鼎分會產業鏈核心成員。" },
-            { badge: "行業榮譽", text: "國泰世紀產物保險企業風險規劃專業顧問。" }
+            { badge: "BNI榮譽", text: "BNI 富鼎分會工廠法規政策產業服務鏈核心成員。" },
+            { badge: "行業榮譽", text: "「專做」產險的業務沒幾個，能深耕 20 年的更是少之又少；憑藉二十年實戰理賠經驗，事故發生時條款判讀精準、理賠無疑慮。" }
         ],
         cases: [
             { title: "食品加工廠｜廠房火險與財產險規劃", problem: "老舊廠房擴建後保額不足，面臨火災與設備損壞風險缺口。", win: "重新盤點資產重置價值並優化保單條款，保費精簡 15% 且保障完整覆蓋。" },
@@ -39,7 +39,7 @@ const teamMembers = [
         phone: "0900-000-002",
         email: "partner2@example.com",
         address: "高雄市苓雅區",
-        websiteLabel: "策識永續人才管理顧問 官網/粉專",
+        websiteLabel: "策識永續人才官網",
         websiteUrl: "https://www.google.com/search?q=策識永續人才管理顧問有限公司",
         services: "企業薪酬制度設計、工作規則與勞動契約健檢、勞資爭議預防、績效考核系統建置與人才培育。",
         honors: [
@@ -68,7 +68,7 @@ const teamMembers = [
         phone: "0900-000-003",
         email: "partner3@example.com",
         address: "高雄市",
-        websiteLabel: "詠成國際開發 官網/社群",
+        websiteLabel: "詠成國際官網",
         websiteUrl: "https://www.google.com/search?q=詠成國際開發有限公司",
         services: "製造業移工引進、特定工廠登記專案移工申請、外籍技術人力媒合、雙語翻譯輔導與宿舍生活管理。",
         honors: [
@@ -97,7 +97,7 @@ const teamMembers = [
         phone: "0900-000-004",
         email: "partner4@example.com",
         address: "高雄市",
-        websiteLabel: "承毅會計師事務所 官網/社群",
+        websiteLabel: "承毅會計師官網",
         websiteUrl: "https://www.google.com/search?q=承毅會計師事務所",
         services: "財務報表與稅務簽證、工商登記設立變更、企業稅務規劃、成本會計建置、股權架構設計與補助核銷簽證。",
         honors: [
@@ -126,7 +126,7 @@ const teamMembers = [
         phone: "0900-000-005",
         email: "partner5@example.com",
         address: "高雄市",
-        websiteLabel: "芊庭開發工程 官網/社群",
+        websiteLabel: "芊庭開發官網",
         websiteUrl: "https://www.google.com/search?q=芊庭開發工程有限公司",
         services: "公共工程承攬、廠區整地與地坪工程、排水溝渠與滯洪設施施作、道路鋪設與基礎土木工程。",
         honors: [
@@ -155,7 +155,7 @@ const teamMembers = [
         phone: "0900-000-006",
         email: "partner6@example.com",
         address: "高雄市",
-        websiteLabel: "專屬理財與企業金融服務",
+        websiteLabel: "企業金融專頁",
         websiteUrl: "https://www.google.com",
         services: "高資產客戶財富管理、企業主資產配置、家族信託與傳承規劃、企業營運周轉金與廠房購置融資專案。",
         honors: [
@@ -204,7 +204,7 @@ function openPartnerModal(index) {
     document.getElementById('p-industry').innerText = member.industry;
     document.getElementById('p-company').innerText = member.company;
 
-    // 1. 聯絡資訊三格（電話、信箱、Google地址）
+    // 1. 聯絡資訊三格（電話、信箱、官方網站/社群）
     const cleanPhone = (member.phone || '').replace(/[^0-9+]/g, '');
     const phoneLink = document.getElementById('p-phone-link');
     phoneLink.href = `tel:${cleanPhone}`;
@@ -221,18 +221,18 @@ function openPartnerModal(index) {
     const shortEmail = member.email && member.email.length > 13 ? member.email.slice(0, 11) + '...' : (member.email || '未提供');
     document.getElementById('p-email-val').innerText = shortEmail;
 
-    const mapLink = document.getElementById('p-map-link');
-    mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(member.address || member.company)}`;
-    document.getElementById('p-address-val').innerText = member.address || '查看地圖';
-
-    // 2. 官方網站 or 社群
     const webLink = document.getElementById('p-website-link');
-    if (member.websiteUrl) {
-        webLink.style.display = 'flex';
-        webLink.href = member.websiteUrl;
-        document.getElementById('p-website-label').innerText = member.websiteLabel || '官方網站 / 社群連結';
+    webLink.href = member.websiteUrl || '#';
+    document.getElementById('p-website-val').innerText = member.websiteLabel || '點擊前往';
+
+    // 2. Google地址（橫條按鈕，點開直接開啟 Google 地圖）
+    const mapLink = document.getElementById('p-map-link');
+    if (member.address) {
+        mapLink.style.display = 'flex';
+        mapLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(member.address)}`;
+        document.getElementById('p-address-label').innerText = member.address;
     } else {
-        webLink.style.display = 'none';
+        mapLink.style.display = 'none';
     }
 
     // 3. 服務項目
