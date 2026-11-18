@@ -744,4 +744,519 @@ body {
 }
 
 .a4-secret-list {
-    list-
+    list-style: none;
+    padding: 14px 18px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.a4-secret-list li {
+    position: relative;
+    padding-left: 18px;
+}
+
+.a4-secret-list li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: #d97706;
+    font-size: 11px;
+    top: 2px;
+}
+
+/* ====== GAINS 工作表：極簡顧問年報級線條網格樣式 ====== */
+.gains-letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.exec-sheet {
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.exec-row {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.exec-row:last-child {
+    border-bottom: none;
+}
+
+.exec-row-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.exec-category-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exec-category-title::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 15px;
+    background: #0f766e;
+    border-radius: 2px;
+}
+
+.exec-salary-inline {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #b45309;
+}
+
+.exec-sub-caption {
+    font-size: 12px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* 2026 營收分佈：純淨數據指標列 */
+.kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 10px 6px;
+    margin-bottom: 14px;
+}
+
+.kpi-cell {
+    text-align: center;
+    padding: 2px 6px;
+    border-right: 1px solid #e2e8f0;
+}
+
+.kpi-cell:last-child {
+    border-right: none;
+}
+
+.kpi-num {
+    font-size: 15px;
+    font-weight: 900;
+    color: #0f766e;
+    line-height: 1.2;
+}
+
+.kpi-label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #475569;
+    margin-top: 3px;
+}
+
+/* 2027 主力項目：5 項均勻自動換行對齊 */
+.priority-flex-5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    list-style: none;
+}
+
+.priority-flex-5 li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.priority-flex-5 li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d97706;
+    font-weight: 900;
+}
+
+/* BNI 目標 & 個人目標：左右雙欄線條分割 */
+.exec-split-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.exec-split-col {
+    padding: 14px 18px;
+}
+
+.exec-split-col:first-child {
+    border-right: 1px solid #e2e8f0;
+}
+
+.clean-bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.clean-bullet-list li {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.55;
+    padding-left: 14px;
+    position: relative;
+}
+
+.clean-bullet-list li::before {
+    content: "▪";
+    position: absolute;
+    left: 0;
+    color: #0f766e;
+    font-size: 11px;
+}
+
+.clean-bullet-list li strong {
+    color: #0f172a;
+}
+
+/* 成就與指標案例：4 項 2x2 田字型網格 */
+.gains-achieve-summary {
+    background: #f8fafc;
+    padding: 12px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #1e293b;
+}
+
+.gains-achieve-summary div strong {
+    color: #0f766e;
+}
+
+.case-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.case-grid-item {
+    padding: 15px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.case-grid-item:nth-child(odd) {
+    border-right: 1px solid #e2e8f0;
+}
+
+.case-grid-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.case-grid-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.case-num-badge {
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.case-grid-title {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.case-detail-row {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #475569;
+    text-align: justify;
+}
+
+.case-detail-row strong {
+    color: #334155;
+    font-weight: 700;
+}
+
+.case-detail-win {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #fffbeb;
+    border-left: 3px solid #d97706;
+    padding: 6px 10px;
+    border-radius: 0 8px 8px 0;
+    text-align: justify;
+}
+
+.case-detail-win strong {
+    color: #b45309;
+    font-weight: 800;
+}
+
+/* 興趣、人際、技巧：企業級規格表 */
+.spec-table-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.spec-table-row:last-child {
+    border-bottom: none;
+}
+
+.spec-th {
+    background: #f8fafc;
+    padding: 11px 14px;
+    font-weight: 800;
+    color: #0f766e;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+}
+
+.spec-td {
+    padding: 11px 16px;
+    color: #1e293b;
+}
+
+.spec-td.highlight-row {
+    background: #fffbeb;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+@media (max-width: 680px) {
+    .card-container {
+        padding: 28px 18px;
+        border-radius: 24px;
+    }
+    .a4-paper {
+        padding: 26px 18px;
+        min-height: auto;
+        border-radius: 22px;
+    }
+    .a4-info-grid,
+    .a4-two-col,
+    .exec-split-cols,
+    .case-grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .kpi-strip {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+    }
+    .kpi-cell:nth-child(3) {
+        border-right: none;
+    }
+    .exec-split-col:first-child {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .case-grid-item:nth-child(odd) {
+        border-right: none;
+    }
+    .case-grid-item:nth-last-child(-n+2) {
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .case-grid-item:last-child {
+        border-bottom: none;
+    }
+    .spec-table-row {
+        grid-template-columns: 1fr;
+    }
+    .spec-th {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 8px 14px;
+    }
+
+    /* 手機版魚骨圖自動轉為直向時間順序 */
+    .fishbone-chart {
+        display: flex;
+        flex-direction: column;
+        padding-left: 24px;
+        padding-right: 0;
+        gap: 12px;
+    }
+    .fishbone-chart::before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 6px;
+        bottom: 18px;
+        width: 3px;
+        background: linear-gradient(180deg, #94a3b8 0%, #0f766e 60%, #d97706 100%);
+        border-radius: 3px;
+    }
+    .fishbone-node {
+        order: initial;
+        grid-column: auto;
+    }
+    .fishbone-rib-top,
+    .fishbone-rib-bottom {
+        display: none;
+    }
+    .fishbone-node::before {
+        content: "";
+        position: absolute;
+        left: -17px;
+        top: 22px;
+        width: 17px;
+        height: 2px;
+        background: #0f766e;
+        transform: rotate(-22deg);
+        transform-origin: left center;
+    }
+    .fishbone-node::after {
+        content: "";
+        position: absolute;
+        left: -21px;
+        top: 18px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 2.5px solid #d97706;
+    }
+    .fishbone-spine {
+        order: 99;
+        height: auto;
+        background: none;
+        margin: 2px 0 0 0;
+        justify-content: flex-start;
+    }
+    .fishbone-tail {
+        display: none;
+    }
+    .fishbone-head {
+        position: relative;
+        right: auto;
+        left: -24px;
+        border-radius: 16px;
+        padding: 5px 14px;
+        font-size: 12px;
+    }
+    .fishbone-head::before {
+        display: none;
+    }
+}
+
+.qrcode-section { 
+    margin-top: 24px; 
+    padding-top: 20px; 
+    border-top: 1px dashed #cbd5e1; 
+}
+
+.qrcode-section img { 
+    width: 140px; 
+    height: 140px; 
+    border-radius: 14px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.url-copy-box {
+    margin-top: 14px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.url-text {
+    font-size: 11px;
+    color: #475569;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    flex: 1;
+    font-family: monospace;
+}
+
+.url-copy-btn {
+    background: #0f766e;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.url-copy-btn:active {
+    background: #0d655e;
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(15, 23, 42, 0.9);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+}
