@@ -90,13 +90,14 @@
             <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
         </div>
 
-        <a href="#top-ten-clients" class="link-btn">
+        <!-- 十大客戶表（點擊彈出 A4 頁面） -->
+        <div class="link-btn" onclick="openDocModal('topTenModal')">
             <div class="link-btn-left">
                 <i class="fa-solid fa-trophy"></i>
                 <span>十大客戶表</span>
             </div>
             <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
+        </div>
 
         <a href="#contact-sphere" class="link-btn">
             <div class="link-btn-left">
@@ -508,6 +509,183 @@
                 <div class="spec-table-row">
                     <div class="spec-th" style="color: #b45309;">核心專長</div>
                     <div class="spec-td highlight-row">專業，是我們的基本功 ; 經驗，是讓政策到落地 ; 結果，就是我們的答卷。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 十大客戶表 A4 彈窗 Modal -->
+<div id="topTenModal" class="modal" onclick="closeDocModal('topTenModal')">
+    <span class="modal-close" onclick="closeDocModal('topTenModal')">&times;</span>
+    <div class="a4-paper" onclick="event.stopPropagation()">
+        <div class="a4-header">
+            <div class="a4-badge">BNI 富鼎分會 ｜ BNI商務一對一</div>
+            <div class="a4-main-title">最近的十位客戶表（B2B）</div>
+            <div class="a4-sub-title">BNI富鼎分會｜特登農地工廠顧問業</div>
+        </div>
+
+        <!-- 主要客群定位 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>目標客群與服務定位</span>
+            </div>
+            <div class="a4-highlight-box" style="background: #fffbeb; border-color: #fde68a;">
+                <div class="a4-highlight-title" style="color: #b45309;">
+                    <i class="fa-solid fa-industry"></i> 主要客群（最常接觸）
+                </div>
+                <div class="a4-highlight-text">
+                    工廠製造業（符合生產、製造、加工），<strong>非倉庫</strong>。
+                </div>
+            </div>
+        </div>
+
+        <!-- 十大指標案例 -->
+        <div class="a4-section">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-trophy"></i>
+                <span>十大指標案例（實戰戰績）</span>
+            </div>
+
+            <div class="exec-sheet">
+                <div class="case-grid-4">
+                    <!-- 案例 1 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">01</span>
+                            <span class="case-grid-title">東億森（富豪分會）｜150坪農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>協助取得消防隊、政府局處都覺得不可能的天然外部水源（8萬元），省去做水塔要 25–30 萬，花錢又佔空間。
+                        </div>
+                    </div>
+
+                    <!-- 案例 2 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">02</span>
+                            <span class="case-grid-title">塑膠設備組裝業｜3,000坪農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>農業群聚區，前代辦處理五年、請了很多人「喬」都沒用且已送遷廠計畫；成為政府的明星案件，睿立 1 年內成功通過。
+                        </div>
+                    </div>
+
+                    <!-- 案例 3 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">03</span>
+                            <span class="case-grid-title">鑄造業｜1,428坪農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>後半部 400 坪工廠興建時間處於法規模糊地帶，多年來前兩任代辦都保不下來、面臨拆除；睿立接手將送特定工廠登記申請。
+                        </div>
+                    </div>
+
+                    <!-- 案例 4 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">04</span>
+                            <span class="case-grid-title">木模業｜500坪農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>特殊工廠買賣，在地仲介因不懂特殊工廠差點以 5,120 萬成交；睿立不到兩個月以 <strong>6,688 萬</strong>結案，並節稅九百多萬。
+                        </div>
+                    </div>
+
+                    <!-- 案例 5 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">05</span>
+                            <span class="case-grid-title">化妝品工廠｜368坪農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>協助工廠免法拍體面退場，節稅九百多萬、清償所有債務後仍留近 2,000 萬現金養老（同業做會永久失去廠登且倒貼）；承接者一年可完成土變，資產價值從 6,000 萬翻升至 1 億。
+                        </div>
+                    </div>
+
+                    <!-- 案例 6 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">06</span>
+                            <span class="case-grid-title">木業｜破千坪三角窗農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>客戶再 20 天即將跳票，花 12 天保下名下所有土地不被法拍、節稅近 3,000 萬；後續協助取得工廠登記證，並導入工廠補助轉型銜接綠色貸款。
+                        </div>
+                    </div>
+
+                    <!-- 案例 7 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">07</span>
+                            <span class="case-grid-title">蔬果集貨場｜1,700坪</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>起初想做碳盤查發現場域不合法，當地科長協助做容許兩年辦不過（因一塊沒地號土地且需拆 2/3 廠房）；接手後 2 星期解決無地號問題、免拆廠房，預計兩年內完成特目結案。
+                        </div>
+                    </div>
+
+                    <!-- 案例 8 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">08</span>
+                            <span class="case-grid-title">水泥管製造業｜1,000坪農地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>客戶找便宜代書亂過戶，導致稅金 140 幾萬且特登將永久撤案；睿立將案件撈回重做，成功取得免稅證明並順利過戶。
+                        </div>
+                    </div>
+
+                    <!-- 案例 9 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">09</span>
+                            <span class="case-grid-title">精密加工業｜1,600坪廠登工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>協助客戶取得 <strong>200 萬補助</strong>，僅用 80 萬建置能源監控系統，其餘資金用於 CNC 設備二軸升級四軸。
+                        </div>
+                    </div>
+
+                    <!-- 案例 10 -->
+                    <div class="case-grid-item">
+                        <div class="case-grid-header">
+                            <span class="case-num-badge">10</span>
+                            <span class="case-grid-title">塑膠墊片業｜150坪建地工廠</span>
+                        </div>
+                        <div class="case-detail-win">
+                            <strong>戰績：</strong>前兩任代辦建地工廠登記證都請不過，睿立接手送件<strong>一個月內</strong>順利結案。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 引薦提示 -->
+        <div class="a4-section" style="margin-bottom: 0;">
+            <div class="a4-section-title">
+                <i class="fa-solid fa-handshake"></i>
+                <span>引薦提示（Referral Guide）</span>
+            </div>
+
+            <div class="exec-sheet">
+                <div class="spec-table-row">
+                    <div class="spec-th">一般引薦</div>
+                    <div class="spec-td">地政士服務項目、一般工廠登記／變更、容許、指定建築線。</div>
+                </div>
+                <div class="spec-table-row">
+                    <div class="spec-th">理想引薦</div>
+                    <div class="spec-td">解套繪、特登農地工廠複雜件（例如農業群聚）、ESG 轉型。</div>
+                </div>
+                <div class="spec-table-row">
+                    <div class="spec-th" style="color: #b45309;">夢幻引薦</div>
+                    <div class="spec-td highlight-row">土地變更、毗鄰變更、太陽能自建（ESCO 補助）、土地工廠買賣。</div>
+                </div>
+                <div class="spec-table-row">
+                    <div class="spec-th" style="color: #dc2626; background: #fef2f2;">壞的引薦</div>
+                    <div class="spec-td" style="background: #fef2f2; color: #991b1b; font-weight: 700;">倉庫、非納管工廠。</div>
                 </div>
             </div>
         </div>
