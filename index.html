@@ -295,7 +295,8 @@
                 <a id="p-website-link" href="#" target="_blank" class="action-card">
                     <i class="fa-solid fa-globe action-icon" style="color: #0f766e;"></i>
                     <span class="action-label">官網/社群</span>
-                    <span class="action-val" id="p-website-val">點擊前往</span>
+                    <span class="action-val" id="p-website-label">點擊前往</span>
+                    <span id="p-website-val" style="display:none;"></span>
                     <span class="copy-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> 開啟連結</span>
                 </a>
             </div>
@@ -304,7 +305,8 @@
             <a id="p-map-link" href="#" target="_blank" class="link-btn" style="background: #f8fafc;">
                 <div class="link-btn-left">
                     <i class="fa-solid fa-location-dot" style="color: #dc2626;"></i>
-                    <span id="p-address-label">Google地址導航</span>
+                    <span id="p-address-val">Google地址導航</span>
+                    <span id="p-address-label" style="display:none;"></span>
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
             </a>
@@ -985,7 +987,7 @@
 <div class="toast" id="toast">已複製到剪貼簿</div>
 
 <!-- 外部載入工廠法規政策產業服務鏈資料 -->
-<script src="./team.js?v=3"></script>
+<script src="./team.js?v=5"></script>
 
 <script>
     function toggleA4Section(bodyId, arrowId, labelId) {
