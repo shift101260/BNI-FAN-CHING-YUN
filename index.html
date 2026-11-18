@@ -271,7 +271,7 @@
             <div id="p-company" style="font-size: 13.5px; color: #475569; font-weight: 700; margin-top: 4px;">公司名稱</div>
         </div>
 
-        <!-- 1. 聯絡資訊（橫排三個框框：電話、信箱、Google地址） -->
+        <!-- 1. 聯絡資訊（橫排三個框框：電話、信箱、官方網站/社群） -->
         <div class="a4-section">
             <div class="a4-section-title">
                 <i class="fa-solid fa-address-card"></i>
@@ -292,19 +292,19 @@
                     <span class="copy-badge"><i class="fa-regular fa-copy"></i> 複製/寄信</span>
                 </a>
 
-                <a id="p-map-link" href="#" target="_blank" class="action-card">
-                    <i class="fa-solid fa-location-dot action-icon" style="color: #dc2626;"></i>
-                    <span class="action-label">Google地址</span>
-                    <span class="action-val" id="p-address-val">查看地圖</span>
-                    <span class="copy-badge"><i class="fa-solid fa-map-location-dot"></i> 開啟地圖</span>
+                <a id="p-website-link" href="#" target="_blank" class="action-card">
+                    <i class="fa-solid fa-globe action-icon" style="color: #0f766e;"></i>
+                    <span class="action-label">官網/社群</span>
+                    <span class="action-val" id="p-website-val">點擊前往</span>
+                    <span class="copy-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> 開啟連結</span>
                 </a>
             </div>
 
-            <!-- 2. 官方網站 or 社群 -->
-            <a id="p-website-link" href="#" target="_blank" class="link-btn" style="background: #f8fafc;">
+            <!-- 2. Google地址（橫條按鈕，點開就是 Google 地圖） -->
+            <a id="p-map-link" href="#" target="_blank" class="link-btn" style="background: #f8fafc;">
                 <div class="link-btn-left">
-                    <i class="fa-solid fa-globe"></i>
-                    <span id="p-website-label">官方網站 / 社群連結</span>
+                    <i class="fa-solid fa-location-dot" style="color: #dc2626;"></i>
+                    <span id="p-address-label">Google地址導航</span>
                 </div>
                 <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
             </a>
@@ -985,7 +985,7 @@
 <div class="toast" id="toast">已複製到剪貼簿</div>
 
 <!-- 外部載入工廠法規政策產業服務鏈資料 -->
-<script src="./team.js?v=2"></script>
+<script src="./team.js?v=3"></script>
 
 <script>
     function toggleA4Section(bodyId, arrowId, labelId) {
