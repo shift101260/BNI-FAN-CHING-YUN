@@ -146,11 +146,11 @@ const teamMembers = [
     {
         industry: "高資產銀行金融服務業",
         name: "李佳怡",
-        company: "銀行／財富管理機構",
+        company: "星展銀行",
         photo: "partner6.jpg",
         phone: "0900-000-006",
         email: "partner6@example.com",
-        address: "高雄市",
+        address: "台北市信義區松智路1號2樓",
         websiteLabel: "企業金融專頁",
         websiteUrl: "https://www.google.com",
         services: "高資產客戶財富管理、企業主資產配置、家族信託與傳承規劃、企業營運周轉金與廠房購置融資專案。",
